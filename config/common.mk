@@ -18,6 +18,7 @@ include vendor/baikalos/config/aosp_audio.mk
 # Google sounds
 include vendor/baikalos/google/GoogleAudio.mk
 
+PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += vendor/baikalos/overlay
 PRODUCT_PACKAGE_OVERLAYS += vendor/baikalos/overlay/common
 
 # TWRP
