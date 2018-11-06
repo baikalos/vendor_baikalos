@@ -1,2 +1,2 @@
 # Inherit common stuff
-$(call inherit-product, vendor/gzosp/config/common.mk)
+$(call inherit-product, vendor/baikalos/config/common.mk)

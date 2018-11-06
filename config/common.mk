@@ -20,37 +20,37 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Backup tool
 PRODUCT_COPY_FILES += \
-    vendor/gzosp/prebuilt/common/bin/backuptool.sh:install/bin/backuptool.sh \
-    vendor/gzosp/prebuilt/common/bin/backuptool.functions:install/bin/backuptool.functions \
-    vendor/gzosp/prebuilt/common/bin/50-gzosp.sh:system/addon.d/50-gzosp.sh \
-    vendor/gzosp/prebuilt/common/bin/clean_cache.sh:system/bin/clean_cache.sh
+    vendor/baikalos/prebuilt/common/bin/backuptool.sh:install/bin/backuptool.sh \
+    vendor/baikalos/prebuilt/common/bin/backuptool.functions:install/bin/backuptool.functions \
+    vendor/baikalos/prebuilt/common/bin/50-baikalos.sh:system/addon.d/50-baikalos.sh \
+    vendor/baikalos/prebuilt/common/bin/clean_cache.sh:system/bin/clean_cache.sh
 
 ifeq ($(AB_OTA_UPDATER),true)
 PRODUCT_COPY_FILES += \
-    vendor/gzosp/prebuilt/common/bin/backuptool_ab.sh:system/bin/backuptool_ab.sh \
-    vendor/gzosp/prebuilt/common/bin/backuptool_ab.functions:system/bin/backuptool_ab.functions \
-    vendor/gzosp/prebuilt/common/bin/backuptool_postinstall.sh:system/bin/backuptool_postinstall.sh
+    vendor/baikalos/prebuilt/common/bin/backuptool_ab.sh:system/bin/backuptool_ab.sh \
+    vendor/baikalos/prebuilt/common/bin/backuptool_ab.functions:system/bin/backuptool_ab.functions \
+    vendor/baikalos/prebuilt/common/bin/backuptool_postinstall.sh:system/bin/backuptool_postinstall.sh
 endif
 
 # Backup services whitelist
 PRODUCT_COPY_FILES += \
-    vendor/gzosp/config/permissions/backup.xml:system/etc/sysconfig/backup.xml
+    vendor/baikalos/config/permissions/backup.xml:system/etc/sysconfig/backup.xml
 
 # Signature compatibility validation
 PRODUCT_COPY_FILES += \
-    vendor/gzosp/prebuilt/common/bin/otasigcheck.sh:install/bin/otasigcheck.sh
+    vendor/baikalos/prebuilt/common/bin/otasigcheck.sh:install/bin/otasigcheck.sh
 
-# Gzosp-specific init file
+# baikalos-specific init file
 PRODUCT_COPY_FILES += \
-    vendor/gzosp/prebuilt/common/etc/init.local.rc:root/init.gzosp.rc
+    vendor/baikalos/prebuilt/common/etc/init.local.rc:root/init.baikalos.rc
 
 # Copy LatinIME for gesture typing
 PRODUCT_COPY_FILES += \
-    vendor/gzosp/prebuilt/common/lib/libjni_latinimegoogle.so:system/lib/libjni_latinimegoogle.so
+    vendor/baikalos/prebuilt/common/lib/libjni_latinimegoogle.so:system/lib/libjni_latinimegoogle.so
 
 # SELinux filesystem labels
 PRODUCT_COPY_FILES += \
-    vendor/gzosp/prebuilt/common/etc/init.d/50selinuxrelabel:system/etc/init.d/50selinuxrelabel
+    vendor/baikalos/prebuilt/common/etc/init.d/50selinuxrelabel:system/etc/init.d/50selinuxrelabel
 
 # Enable SIP+VoIP on all targets
 PRODUCT_COPY_FILES += \
@@ -58,18 +58,18 @@ PRODUCT_COPY_FILES += \
 
 # Don't export PS1 in /system/etc/mkshrc.
 PRODUCT_COPY_FILES += \
-    vendor/gzosp/prebuilt/common/etc/mkshrc:system/etc/mkshrc \
-    vendor/gzosp/prebuilt/common/etc/sysctl.conf:system/etc/sysctl.conf
+    vendor/baikalos/prebuilt/common/etc/mkshrc:system/etc/mkshrc \
+    vendor/baikalos/prebuilt/common/etc/sysctl.conf:system/etc/sysctl.conf
 
 # Fix Dialer
 #PRODUCT_COPY_FILES +=  \
-#    vendor/gzosp/prebuilt/common/sysconfig/dialer_experience.xml:system/etc/sysconfig/dialer_experience.xml
+#    vendor/baikalos/prebuilt/common/sysconfig/dialer_experience.xml:system/etc/sysconfig/dialer_experience.xml
 
-# Gzosp-specific startup services
+# baikalos-specific startup services
 PRODUCT_COPY_FILES += \
-    vendor/gzosp/prebuilt/common/etc/init.d/00banner:system/etc/init.d/00banner \
-    vendor/gzosp/prebuilt/common/etc/init.d/90userinit:system/etc/init.d/90userinit \
-    vendor/gzosp/prebuilt/common/bin/sysinit:system/bin/sysinit
+    vendor/baikalos/prebuilt/common/etc/init.d/00banner:system/etc/init.d/00banner \
+    vendor/baikalos/prebuilt/common/etc/init.d/90userinit:system/etc/init.d/90userinit \
+    vendor/baikalos/prebuilt/common/bin/sysinit:system/bin/sysinit
 
 # Required packages
 PRODUCT_PACKAGES += \
@@ -138,7 +138,7 @@ PRODUCT_PACKAGES += \
     AndroidDarkThemeOverlay \
     SettingsDarkThemeOverlay
 
-PRODUCT_PACKAGE_OVERLAYS += vendor/gzosp/overlay/common
+PRODUCT_PACKAGE_OVERLAYS += vendor/baikalos/overlay/common
 
 # Boot animation include
 ifneq ($(TARGET_SCREEN_WIDTH) $(TARGET_SCREEN_HEIGHT),$(space))
@@ -152,7 +152,7 @@ TARGET_BOOTANIMATION_SIZE := $(shell \
   fi )
 
 # get a sorted list of the sizes
-bootanimation_sizes := $(subst .zip,, $(shell ls vendor/gzosp/prebuilt/common/bootanimation))
+bootanimation_sizes := $(subst .zip,, $(shell ls vendor/baikalos/prebuilt/common/bootanimation))
 bootanimation_sizes := $(shell echo -e $(subst $(space),'\n',$(bootanimation_sizes)) | sort -rn)
 
 # find the appropriate size and set
@@ -170,39 +170,39 @@ $(foreach size,$(bootanimation_sizes), $(call check_and_set_bootanimation,$(size
 
 ifeq ($(TARGET_BOOTANIMATION_HALF_RES),true)
 PRODUCT_COPY_FILES += \
-    vendor/gzosp/prebuilt/common/bootanimation/halfres/$(TARGET_BOOTANIMATION_NAME).zip:system/media/bootanimation.zip
+    vendor/baikalos/prebuilt/common/bootanimation/halfres/$(TARGET_BOOTANIMATION_NAME).zip:system/media/bootanimation.zip
 else
 PRODUCT_COPY_FILES += \
-    vendor/gzosp/prebuilt/common/bootanimation/$(TARGET_BOOTANIMATION_NAME).zip:system/media/bootanimation.zip
+    vendor/baikalos/prebuilt/common/bootanimation/$(TARGET_BOOTANIMATION_NAME).zip:system/media/bootanimation.zip
 endif
 endif
 
 # Versioning System
-# gzosp first version.
+# baikalos first version.
 PRODUCT_VERSION_MAJOR = 9
 PRODUCT_VERSION_MINOR = Alpha
 PRODUCT_VERSION_MAINTENANCE = 1.0
-GZOSP_POSTFIX := -$(shell date +"%Y%m%d-%H%M")
-ifdef GZOSP_BUILD_EXTRA
-    GZOSP_POSTFIX := -$(GZOSP_BUILD_EXTRA)
+BAIKALOS_POSTFIX := -$(shell date +"%Y%m%d-%H%M")
+ifdef BAIKALOS_BUILD_EXTRA
+    BAIKALOS_POSTFIX := -$(BAIKALOS_BUILD_EXTRA)
 endif
 
-ifndef GZOSP_BUILD_TYPE
-    GZOSP_BUILD_TYPE := UNOFFICIAL
+ifndef BAIKALOS_BUILD_TYPE
+    BAIKALOS_BUILD_TYPE := UNOFFICIAL
 endif
 
-# Set all versions
-GZOSP_VERSION := Gzosp-$(GZOSP_BUILD)-$(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR).$(PRODUCT_VERSION_MAINTENANCE)-$(GZOSP_BUILD_TYPE)$(GZOSP_POSTFIX)
-GZOSP_MOD_VERSION := Gzosp-$(GZOSP_BUILD)-$(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR).$(PRODUCT_VERSION_MAINTENANCE)-$(GZOSP_BUILD_TYPE)$(GZOSP_POSTFIX)
+# Set all version
+BAIKALOS_VERSION := BaikalOS-$(BAIKALOS_BUILD)-$(PRODUCT_VERSION_MAJOR)$(BAIKALOS_POSTFIX)
+BAIKALOS_MOD_VERSION := BaikalOS-$(BAIKALOS_BUILD)-$(PRODUCT_VERSION_MAJOR)$(BAIKALOS_POSTFIX)
 
 PRODUCT_PROPERTY_OVERRIDES += \
     BUILD_DISPLAY_ID=$(BUILD_ID) \
-    gzosp.ota.version=$(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR).$(PRODUCT_VERSION_MAINTENANCE) \
-    ro.gzosp.version=$(GZOSP_VERSION) \
-    ro.modversion=$(GZOSP_MOD_VERSION) \
-    ro.gzosp.buildtype=$(GZOSP_BUILD_TYPE)
+    baikalos.ota.version=$(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR).$(PRODUCT_VERSION_MAINTENANCE) \
+    ro.baikalos.version=$(BAIKALOS_VERSION) \
+    ro.modversion=$(BAIKALOS_MOD_VERSION) \
+    ro.baikalos.buildtype=$(BAIKALOS_BUILD_TYPE)
 
 # Google sounds
-include vendor/gzosp/google/GoogleAudio.mk
+include vendor/baikalos/google/GoogleAudio.mk
 
-EXTENDED_POST_PROCESS_PROPS := vendor/gzosp/tools/gzosp_process_props.py
+EXTENDED_POST_PROCESS_PROPS := vendor/baikalos/tools/baikalos_process_props.py
