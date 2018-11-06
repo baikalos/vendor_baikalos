@@ -101,6 +101,9 @@ PRODUCT_PACKAGES += \
     BluetoothExt \
     Launcher3Dark
 
+# BAIKAL packages
+PRODUCT_PACKAGES += \
+    BaikalOSExtras
 
 # Extra tools
 PRODUCT_PACKAGES += \
