@@ -105,6 +105,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     BaikalOSExtras
 
+# BAIKAL theming packages
+include packages/overlays/BaikalOS/product_packages.mk
+
 # Extra tools
 PRODUCT_PACKAGES += \
     openvpn \
@@ -133,6 +136,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Storage manager
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.storage_manager.enabled=true
+
+# Disable rescue party
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.sys.disable_rescue=true
 
 # easy way to extend to add more packages
 -include vendor/extra/product.mk
