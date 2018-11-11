@@ -105,6 +105,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     BaikalOSExtras
 
+# BAIKAL theming packages
+include packages/overlays/BaikalOS/product_packages.mk
+
 # Extra tools
 PRODUCT_PACKAGES += \
     openvpn \
