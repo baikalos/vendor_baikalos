@@ -212,6 +212,12 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.modversion=$(BAIKALOS_MOD_VERSION) \
     ro.baikalos.buildtype=$(BAIKALOS_BUILD_TYPE)
 
+# BaikalOS OTA
+ifndef BAIKALOS_BUILD_DEV
+PRODUCT_PACKAGES +=  \
+   BaikalDelta
+endif
+
 # Google sounds
 include vendor/baikalos/google/GoogleAudio.mk
 
