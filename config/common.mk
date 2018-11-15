@@ -71,6 +71,10 @@ PRODUCT_COPY_FILES += \
     vendor/baikalos/prebuilt/common/etc/init.d/90userinit:system/etc/init.d/90userinit \
     vendor/baikalos/prebuilt/common/bin/sysinit:system/bin/sysinit
 
+# Additional apps
+PRODUCT_PACKAGES += \
+    Chromium
+
 # Required packages
 PRODUCT_PACKAGES += \
     CellBroadcastReceiver \
