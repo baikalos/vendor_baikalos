@@ -73,7 +73,8 @@ PRODUCT_COPY_FILES += \
 
 # Additional apps
 PRODUCT_PACKAGES += \
-    Chromium
+    Chromium \
+    OmniRecord
 
 # Required packages
 PRODUCT_PACKAGES += \
