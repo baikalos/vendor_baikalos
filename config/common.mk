@@ -96,8 +96,13 @@ PRODUCT_PACKAGES += \
     librsjni
 
 # AudioFX
+#PRODUCT_PACKAGES += \
+#    AudioFX
+
+# Music/FX
 PRODUCT_PACKAGES += \
-    AudioFX
+    MusicFX \
+    Phonograph
 
 # Extra Optional packages
 PRODUCT_PACKAGES += \
