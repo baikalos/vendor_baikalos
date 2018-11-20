@@ -10,3 +10,7 @@ include vendor/baikalos/config/BoardConfigQcom.mk
 endif
 
 include vendor/baikalos/config/BoardConfigSoong.mk
+
+PRODUCT_COPY_FILES += \
+    vendor/baikalos/config/sysconfig/baikal_whitelist.xml:system/etc/sysconfig/baikal_whitelist.xml \
+    vendor/baikalos/config/permissions/privapp-permissions-baikal.xml:system/etc/permissions/privapp-permissions-baikal.xml \
