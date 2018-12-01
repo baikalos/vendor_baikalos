@@ -220,7 +220,13 @@ PRODUCT_PROPERTY_OVERRIDES += \
     baikalos.ota.version=$(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR).$(PRODUCT_VERSION_MAINTENANCE) \
     ro.baikalos.version=$(BAIKALOS_VERSION) \
     ro.modversion=$(BAIKALOS_MOD_VERSION) \
-    ro.baikalos.buildtype=$(BAIKALOS_BUILD_TYPE)
+    ro.baikalos.buildtype=$(BAIKALOS_BUILD_TYPE) \
+    ro.baikalos.fingerprint=$(PLATFORM_VERSION)-$(BUILD_ID)-$(shell date +%Y%m%d)
+
+
+
+
+
 
 # BaikalOS OTA
 ifndef BAIKALOS_BUILD_DEV
