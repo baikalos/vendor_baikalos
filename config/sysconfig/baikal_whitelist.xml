@@ -31,6 +31,25 @@
 -->
 
 <config>
+
+    <!-- This is meant to be the canonical feature identifying 2016 and newer Nexus devices. -->
+    <feature name="com.google.android.feature.PIXEL_EXPERIENCE" />
+
+    <!-- The feature identifying devices which are able to use the Turbo app -->
+    <feature name="com.google.android.feature.TURBO_PRELOAD" />
+
+    <!-- The feature identifying devices which are able to use the Android Wellbeing app. -->
+    <feature name="com.google.android.feature.WELLBEING" />
+
+    <!-- Enable Zero Touch Provisioning support for 2016 and newer Nexus devices. -->
+    <feature name="com.google.android.feature.ZERO_TOUCH" />
+
+    <!-- This is meant to be the canonical feature identifying 2017 and newer Nexus devices. -->
+    <feature name="com.google.android.feature.PIXEL_2017_EXPERIENCE" />
+
+    <!-- This defines the Photos preload feature for specifically the 2018 Pixel devices. -->
+    <feature name="com.google.android.apps.photos.PIXEL_2018_PRELOAD" />
+
     <!-- These are Baikal components that need to freely run in the background -->
 
     <allow-in-power-save package="com.android.packageinstaller" />
@@ -49,5 +68,8 @@
     <allow-in-power-save package="com.android.server.telecom" />
     <allow-in-power-save package="com.google.android.dialer" />
     <allow-in-power-save package="org.codeaurora.ims" />
+
+    <hidden-api-whitelisted-app package="com.asksven.betterbatterystats_xdaedition" />
+    <hidden-api-whitelisted-app package="com.asksven.betterbatterystats" />
 
 </config>
