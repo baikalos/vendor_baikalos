@@ -118,6 +118,25 @@ PRODUCT_PACKAGES += \
 # BAIKAL theming packages
 include packages/overlays/BaikalOS/product_packages.mk
 
+# PixelStyle
+DEVICE_PACKAGE_OVERLAYS += \
+    vendor/baikalos/overlay/PixelStyle/
+
+# Fonts
+PRODUCT_COPY_FILES += \
+    vendor/baikalos/fonts/GoogleSans-Regular.ttf:system/fonts/GoogleSans-Regular.ttf \
+    vendor/baikalos/fonts/GoogleSans-Medium.ttf:system/fonts/GoogleSans-Medium.ttf \
+    vendor/baikalos/fonts/GoogleSans-MediumItalic.ttf:system/fonts/GoogleSans-MediumItalic.ttf  \
+    vendor/baikalos/fonts/GoogleSans-Italic.ttf:system/fonts/GoogleSans-Italic.ttf \
+    vendor/baikalos/fonts/GoogleSans-Bold.ttf:system/fonts/GoogleSans-Bold.ttf \
+    vendor/baikalos/fonts/GoogleSans-BoldItalic.ttf:system/fonts/GoogleSans-BoldItalic.ttf
+
+ADDITIONAL_FONTS_FILE := vendor/baikalos/fonts/google-sans.xml
+
+# Pixel Theme for keyboard
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.com.google.ime.theme_id=5
+
 # Extra tools
 PRODUCT_PACKAGES += \
     openvpn \
@@ -128,7 +147,6 @@ PRODUCT_PACKAGES += \
     mkfs.exfat \
     ntfsfix \
     ntfs-3g
-
 
 PRODUCT_PACKAGES += \
     charger_res_images
