@@ -1,6 +1,8 @@
 # Extras
 
 import /init.superuser.rc
+import /system/etc/init/init.${ro.hardware}.rc
+import /system/etc/init/init.target.rc
 
 on init
     export TERMINFO /system/etc/terminfo
