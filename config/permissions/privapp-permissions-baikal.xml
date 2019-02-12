@@ -3,5 +3,11 @@
     <privapp-permissions package="com.google.android.apps.wellbeing">
         <permission name="android.permission.CONTROL_DISPLAY_SATURATION"/>
     </privapp-permissions>
+
+    <privapp-permissions package="com.qualcomm.wfd.service">
+        <permission name="android.permission.READ_FRAME_BUFFER"/>
+        <permission name="android.permission.WRITE_MEDIA_STORAGE"/>
+    </privapp-permissions>
+
 </permissions>
 
