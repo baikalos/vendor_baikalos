@@ -1,6 +1,6 @@
 #!/system/bin/sh
 #
-# AICP A/B OTA Postinstall Script
+# BAIKALOS A/B OTA Postinstall Script
 #
 
 /postinstall/system/bin/backuptool_ab.sh backup

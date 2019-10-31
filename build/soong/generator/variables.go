@@ -6,12 +6,12 @@ import (
 	"android/soong/android"
 )
 
-func aicpExpandVariables(ctx android.ModuleContext, in string) string {
-	aicpVars := ctx.Config().VendorConfig("aicpVarsPlugin")
+func baikalosExpandVariables(ctx android.ModuleContext, in string) string {
+	baikalosVars := ctx.Config().VendorConfig("baikalosVarsPlugin")
 
 	out, err := android.Expand(in, func(name string) (string, error) {
-		if aicpVars.IsSet(name) {
-			return aicpVars.String(name), nil
+		if baikalosVars.IsSet(name) {
+			return baikalosVars.String(name), nil
 		}
 		// This variable is not for us, restore what the original
 		// variable string will have looked like for an Expand

@@ -64,11 +64,11 @@ PRODUCT_PACKAGES += \
     charger_res_images
 
 # Custom off-mode charger
-ifeq ($(WITH_AICP_CHARGER),true)
+ifeq ($(WITH_BAIKALOS_CHARGER),true)
 PRODUCT_PACKAGES += \
-    aicp_charger_res_images \
+    baikalos_charger_res_images \
     font_log.png \
-    libhealthd.aicp
+    libhealthd.baikalos
 endif
 
 # Extra tools
@@ -100,15 +100,21 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     bootanimation.zip 
 
-# AICP OTA
-ifneq ($(AICP_BUILDTYPE),UNOFFICIAL)
+# BAIKALOS OTA
+ifneq ($(BAIKALOS_BUILDTYPE),UNOFFICIAL)
 PRODUCT_PACKAGES +=  \
    Updater
 endif
 
-# AICP packages
+# BAIKALOS packages
 PRODUCT_PACKAGES += \
     AicpExtras \
+    BaikalOSExtras \
     TilesWallpaper
 
+# include AICP overalys (Themes support)
 include packages/overlays/AICP/product_packages.mk
+
+# include BaikalOS overalys
+include packages/overlays/baikalos/product_packages.mk
+

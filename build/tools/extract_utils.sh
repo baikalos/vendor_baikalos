@@ -47,7 +47,7 @@ trap cleanup 0
 #
 # $1: device name
 # $2: vendor name
-# $3: AICP root directory
+# $3: BAIKALOS root directory
 # $4: is common device - optional, default to false
 # $5: cleanup - optional, default to true
 # $6: custom vendor makefile name - optional, default to false
@@ -68,15 +68,15 @@ function setup_vendor() {
         exit 1
     fi
 
-    export AICP_ROOT="$3"
-    if [ ! -d "$AICP_ROOT" ]; then
-        echo "\$AICP_ROOT must be set and valid before including this script!"
+    export BAIKALOS_ROOT="$3"
+    if [ ! -d "$BAIKALOS_ROOT" ]; then
+        echo "\$BAIKALOS_ROOT must be set and valid before including this script!"
         exit 1
     fi
 
     export OUTDIR=vendor/"$VENDOR"/"$DEVICE"
-    if [ ! -d "$AICP_ROOT/$OUTDIR" ]; then
-        mkdir -p "$AICP_ROOT/$OUTDIR"
+    if [ ! -d "$BAIKALOS_ROOT/$OUTDIR" ]; then
+        mkdir -p "$BAIKALOS_ROOT/$OUTDIR"
     fi
 
     VNDNAME="$6"
@@ -84,9 +84,9 @@ function setup_vendor() {
         VNDNAME="$DEVICE"
     fi
 
-    export PRODUCTMK="$AICP_ROOT"/"$OUTDIR"/"$VNDNAME"-vendor.mk
-    export ANDROIDMK="$AICP_ROOT"/"$OUTDIR"/Android.mk
-    export BOARDMK="$AICP_ROOT"/"$OUTDIR"/BoardConfigVendor.mk
+    export PRODUCTMK="$BAIKALOS_ROOT"/"$OUTDIR"/"$VNDNAME"-vendor.mk
+    export ANDROIDMK="$BAIKALOS_ROOT"/"$OUTDIR"/Android.mk
+    export BOARDMK="$BAIKALOS_ROOT"/"$OUTDIR"/BoardConfigVendor.mk
 
     if [ "$4" == "true" ] || [ "$4" == "1" ]; then
         COMMON=1
@@ -851,7 +851,7 @@ function get_file() {
 # Convert apk|jar .odex in the corresposing classes.dex
 #
 function oat2dex() {
-    local AICP_TARGET="$1"
+    local BAIKALOS_TARGET="$1"
     local OEM_TARGET="$2"
     local SRC="$3"
     local TARGET=
@@ -859,16 +859,16 @@ function oat2dex() {
     local HOST="$(uname)"
 
     if [ -z "$BAKSMALIJAR" ] || [ -z "$SMALIJAR" ]; then
-        export BAKSMALIJAR="$LINEAGE_ROOT"/prebuilts/tools-aicp/common/smali/baksmali.jar
-        export SMALIJAR="$LINEAGE_ROOT"/prebuilts/tools-aicp/common/smali/smali.jar
+        export BAKSMALIJAR="$LINEAGE_ROOT"/prebuilts/tools-baikalos/common/smali/baksmali.jar
+        export SMALIJAR="$LINEAGE_ROOT"/prebuilts/tools-baikalos/common/smali/smali.jar
     fi
 
     if [ -z "$VDEXEXTRACTOR" ]; then
-        export VDEXEXTRACTOR="$LINEAGE_ROOT"/prebuilts/tools-aicp/"${HOST,,}"-x86/bin/vdexExtractor
+        export VDEXEXTRACTOR="$LINEAGE_ROOT"/prebuilts/tools-baikalos/"${HOST,,}"-x86/bin/vdexExtractor
     fi
 
     if [ -z "$CDEXCONVERTER" ]; then
-        export CDEXCONVERTER="$LINEAGE_ROOT"/prebuilts/tools-aicp/"${HOST,,}"-x86/bin/compact_dex_converter
+        export CDEXCONVERTER="$LINEAGE_ROOT"/prebuilts/tools-baikalos/"${HOST,,}"-x86/bin/compact_dex_converter
     fi
 
     # Extract existing boot.oats to the temp folder
@@ -888,11 +888,11 @@ function oat2dex() {
         FULLY_DEODEXED=1 && return 0 # system is fully deodexed, return
     fi
 
-    if [ ! -f "$AICP_TARGET" ]; then
+    if [ ! -f "$BAIKALOS_TARGET" ]; then
         return;
     fi
 
-    if grep "classes.dex" "$AICP_TARGET" >/dev/null; then
+    if grep "classes.dex" "$BAIKALOS_TARGET" >/dev/null; then
         return 0 # target apk|jar is already odexed, return
     fi
 
@@ -920,7 +920,7 @@ function oat2dex() {
                 java -jar "$BAKSMALIJAR" deodex -o "$TMPDIR/dexout" -b "$BOOTOAT" -d "$TMPDIR" "$TMPDIR/$(basename "$OAT")"
                 java -jar "$SMALIJAR" assemble "$TMPDIR/dexout" -o "$TMPDIR/classes.dex"
             fi
-        elif [[ "$AICP_TARGET" =~ .jar$ ]]; then
+        elif [[ "$BAIAKALOS_TARGET" =~ .jar$ ]]; then
             JAROAT="$TMPDIR/system/framework/$ARCH/boot-$(basename ${OEM_TARGET%.*}).oat"
             JARVDEX="/system/framework/boot-$(basename ${OEM_TARGET%.*}).vdex"
             if [ ! -f "$JAROAT" ]; then
@@ -1115,7 +1115,7 @@ function extract() {
     local FIXUP_HASHLIST=( ${PRODUCT_COPY_FILES_FIXUP_HASHES[@]} ${PRODUCT_PACKAGES_FIXUP_HASHES[@]} )
     local PRODUCT_COPY_FILES_COUNT=${#PRODUCT_COPY_FILES_LIST[@]}
     local COUNT=${#FILELIST[@]}
-    local OUTPUT_ROOT="$AICP_ROOT"/"$OUTDIR"/proprietary
+    local OUTPUT_ROOT="$BAIKALOS_ROOT"/"$OUTDIR"/proprietary
     local OUTPUT_TMP="$TMPDIR"/"$OUTDIR"/proprietary
 
     if [ "$SRC" = "adb" ]; then
@@ -1143,7 +1143,7 @@ function extract() {
             # If OTA is block based, extract it.
             elif [ -a "$DUMPDIR"/system.new.dat ]; then
                 echo "Converting system.new.dat to system.img"
-                python "$AICP_ROOT"/vendor/aicp/build/tools/sdat2img.py "$DUMPDIR"/system.transfer.list "$DUMPDIR"/system.new.dat "$DUMPDIR"/system.img 2>&1
+                python "$BAIKALOS_ROOT"/vendor/baikalos/build/tools/sdat2img.py "$DUMPDIR"/system.transfer.list "$DUMPDIR"/system.new.dat "$DUMPDIR"/system.img 2>&1
                 rm -rf "$DUMPDIR"/system.new.dat "$DUMPDIR"/system
                 mkdir "$DUMPDIR"/system "$DUMPDIR"/tmp
                 echo "Requesting sudo access to mount the system.img"
@@ -1232,7 +1232,7 @@ function extract() {
             printf '    + keeping pinned file with hash %s\n' "${HASH}"
         else
             FOUND=false
-            # Try AICP target first.
+            # Try BAIKALOS target first.
             # Also try to search for files stripped of
             # the "/system" prefix, if we're actually extracting
             # from a system image.
@@ -1319,7 +1319,7 @@ function extract_firmware() {
     local FILELIST=( ${PRODUCT_COPY_FILES_LIST[@]} )
     local COUNT=${#FILELIST[@]}
     local SRC="$2"
-    local OUTPUT_DIR="$AICP_ROOT"/"$OUTDIR"/radio
+    local OUTPUT_DIR="$BAIKALOS_ROOT"/"$OUTDIR"/radio
 
     if [ "$VENDOR_RADIO_STATE" -eq "0" ]; then
         echo "Cleaning firmware output directory ($OUTPUT_DIR).."

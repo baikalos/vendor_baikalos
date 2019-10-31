@@ -34,7 +34,7 @@
         <permission name="lineageos.permission.MANAGE_LIVEDISPLAY" />
     </privapp-permissions>
 
-    <privapp-permissions package="com.aicp.extras">
+    <privapp-permissions package="com.baikalos.extras">
         <permission name="android.permission.ACCESS_CACHE_FILESYSTEM" />
         <permission name="android.permission.REBOOT" />
         <permission name="android.permission.RECOVERY" />
@@ -47,7 +47,7 @@
         <permission name="android.permission.WRITE_MEDIA_STORAGE" />
     </privapp-permissions>
 
-    <privapp-permissions package="com.aicp.updater3">
+    <privapp-permissions package="com.baikalos.updater3">
         <permission name="android.permission.ACCESS_CACHE_FILESYSTEM"/>
         <permission name="android.permission.REBOOT"/>
         <permission name="android.permission.RECOVERY"/>

@@ -90,7 +90,7 @@
 
     <!-- Component name of the default wallpaper. This will be ImageWallpaper if not
          specified -->
-    <string name="default_wallpaper_component" translatable="false">com.aicp.livewallpaper/pit.livewallpaper.ColloredWallpaperService</string>
+    <!-- string name="default_wallpaper_component" translatable="false">com.aicp.livewallpaper/pit.livewallpaper.ColloredWallpaperService</string -->
 
     <!-- Should the pinner service pin the Home application? -->
     <bool name="config_pinnerHomeApp">true</bool>

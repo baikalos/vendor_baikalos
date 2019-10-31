@@ -12,8 +12,8 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-$(call inherit-product, build/target/product/aosp_x86_64.mk)
+$(call inherit-product, build/target/product/aosp_arm64.mk)
 
-include vendor/aicp/build/target/product/aicp_generic_target.mk
+include vendor/baikalos/build/target/product/baikalos_generic_target.mk
 
-PRODUCT_NAME := aicp_x86_64
+PRODUCT_NAME := baikalos_arm64

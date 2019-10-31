@@ -1,4 +1,4 @@
-# Inherit common AICP stuff
-$(call inherit-product, vendor/aicp/config/common.mk)
+# Inherit common BAIKALOS stuff
+$(call inherit-product, vendor/baikalos/config/common.mk)
 
 PRODUCT_SIZE := full

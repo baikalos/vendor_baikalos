@@ -14,7 +14,7 @@
 # limitations under the License.
 
 
-BUILD_RRO_SYSTEM_PACKAGE := $(TOPDIR)vendor/aicp/build/core/system_rro.mk
+BUILD_RRO_SYSTEM_PACKAGE := $(TOPDIR)vendor/baikalos/build/core/system_rro.mk
 
 # Rules for QCOM targets
-include $(TOPDIR)vendor/aicp/build/core/qcom_target.mk
+include $(TOPDIR)vendor/baikalos/build/core/qcom_target.mk

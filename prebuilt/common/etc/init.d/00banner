@@ -2,6 +2,6 @@
 #
 # Print startup info
 #
-L="log -p i -t aicp"
+L="log -p i -t baikalos"
 
-$L "Welcome to Android `getprop ro.build.version.release` / AICP-`getprop ro.aicp.version.update`";
+$L "Welcome to Android `getprop ro.build.version.release` / BAIKALOS-`getprop ro.baikalos.version.update`";
