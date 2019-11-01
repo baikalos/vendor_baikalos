@@ -149,6 +149,7 @@ endif
 PRODUCT_PACKAGES += \
     AicpExtras \
     BaikalExtras \
+    AicpThemesStub \
     FontUbuntuOverlay \
     FontOpenSansOverlay \
     FontComfortaaOverlay \
