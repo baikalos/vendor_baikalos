@@ -1,5 +1,6 @@
 # Inherit full common BAIKALOS stuff
 $(call inherit-product, vendor/baikalos/config/common_full.mk)
+$(call inherit-product, vendor/baikalos/config/common_apn.mk)
 
 # Required packages
 PRODUCT_PACKAGES += \

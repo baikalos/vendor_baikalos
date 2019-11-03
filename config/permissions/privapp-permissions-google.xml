@@ -373,6 +373,7 @@ It allows additional grants on top of privapp-permissions-platform.xml
         <permission name="android.permission.MANAGE_USERS"/>
         <permission name="android.permission.MASTER_CLEAR"/>
         <permission name="android.permission.MODIFY_PHONE_STATE"/>
+        <permission name="android.permission.NETWORK_SETUP_WIZARD"/>
         <permission name="android.permission.NOTIFICATION_DURING_SETUP"/>
         <permission name="android.permission.OVERRIDE_WIFI_CONFIG"/>
         <permission name="android.permission.PERFORM_CDMA_PROVISIONING"/>
