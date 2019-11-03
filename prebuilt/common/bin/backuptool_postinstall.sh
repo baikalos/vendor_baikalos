@@ -1,6 +1,6 @@
 #!/system/bin/sh
 #
-# BAIKALOS A/B OTA Postinstall Script
+# LineageOS A/B OTA Postinstall Script
 #
 
 /postinstall/system/bin/backuptool_ab.sh backup
