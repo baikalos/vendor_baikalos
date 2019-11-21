@@ -1,27 +1,30 @@
 # Required packages
 PRODUCT_PACKAGES += \
-    CellBroadcastReceiver \
     Development \
     SpareParts \
-    LockClock 
+#    LockClock 
 
 # Optional packages
 PRODUCT_PACKAGES += \
     Basic \
-    LiveWallpapersPicker \
-    PhaseBeam 
+    PhaseBeam \
+    ThemePicker \
+    WallpaperPicker2
 
 # su
-ifeq ($(WITH_SU),true)
 PRODUCT_PACKAGES += \
-    su
-endif
+    adb_root
+
+#ifeq ($(WITH_SU),true)
+#PRODUCT_PACKAGES += \
+#    su
+#endif
 
 # Extra Optional packages
 PRODUCT_PACKAGES += \
     Calculator \
     BluetoothExt \
-    Launcher3Dark
+#    Launcher3Dark
 
 # MusicFX
 PRODUCT_PACKAGES += \
@@ -43,8 +46,8 @@ PRODUCT_PACKAGES += \
     OmniJaws
 
 # Fonts packages
-PRODUCT_PACKAGES += \
-    invictrix-fonts
+#PRODUCT_PACKAGES += \
+#    invictrix-fonts
 
 # Extra tools
 PRODUCT_PACKAGES += \
@@ -92,9 +95,9 @@ PRODUCT_PACKAGES += \
     wget \
     zip
 
-PRODUCT_PACKAGES += \
-    AndroidDarkThemeOverlay \
-    SettingsDarkThemeOverlay
+#PRODUCT_PACKAGES += \
+#    AndroidDarkThemeOverlay \
+#    SettingsDarkThemeOverlay
 
 # Bootanimation include
 #PRODUCT_PACKAGES += \
@@ -150,8 +153,8 @@ PRODUCT_PACKAGES += \
     TilesWallpaper
 
 # include AICP overalys (Themes support)
-include packages/overlays/AICP/product_packages.mk
+-include packages/overlays/AICP/product_packages.mk
 
 # include BaikalOS overalys
-include packages/overlays/baikalos/product_packages.mk
+-include packages/overlays/baikalos/product_packages.mk
 
