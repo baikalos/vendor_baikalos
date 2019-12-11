@@ -36,6 +36,9 @@ ifdef BAIKALOS_BUILDTYPE
     ifeq ($(BAIKALOS_BUILDTYPE), UNOFFICIAL)
         BAIKALOS_VERSION := $(TARGET_PRODUCT)_$(BAIKALOS_BRANCH)-$(VERSION)-UNOFFICIAL-$(shell date -u +%Y%0m%0d)
     endif
+    ifeq ($(BAIKALOS_BUILDTYPE), DEV)
+        BAIKALOS_VERSION := $(TARGET_PRODUCT)_$(BAIKALOS_BRANCH)-$(VERSION)-DEV-$(shell date -u +%Y%0m%0d)
+    endif
 else
 #We reset back to UNOFFICIAL
         BAIKALOS_VERSION := $(TARGET_PRODUCT)_$(BAIKALOS_BRANCH)-$(VERSION)-UNOFFICIAL-$(shell date -u +%Y%0m%0d)
