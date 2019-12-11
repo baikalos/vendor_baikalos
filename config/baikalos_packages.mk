@@ -142,9 +142,9 @@ endif
 endif
 
 # BAIKALOS OTA
-ifneq ($(BAIKALOS_BUILDTYPE),UNOFFICIAL)
+ifeq ($(BAIKALOS_BUILDTYPE),OFFICIAL)
 PRODUCT_PACKAGES +=  \
-   Updater
+   BaikalDelta
 endif
 
 # BAIKALOS packages
