@@ -98,6 +98,7 @@ function breakfast()
             lunch baikalos_$target-$variant
         fi
     fi
+    execaicpscripts
     return $?
 }
 

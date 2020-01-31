@@ -1,5 +1,6 @@
 # Required packages
 PRODUCT_PACKAGES += \
+    CellBroadcastReceiver \
     Development \
     SpareParts \
 #    LockClock 
@@ -22,6 +23,7 @@ PRODUCT_PACKAGES += \
 
 # Extra Optional packages
 PRODUCT_PACKAGES += \
+    ExactCalculator \
     Calculator \
     BluetoothExt \
 #    Launcher3Dark
@@ -151,7 +153,16 @@ endif
 PRODUCT_PACKAGES += \
     AicpExtras \
     BaikalOSExtras \
-    TilesWallpaper
+    FontUbuntuOverlay \
+    FontOpenSansOverlay \
+    FontComfortaaOverlay \
+    FontCaviarDreamsOverlay \
+    FontExotwoOverlay \
+    FontSnigletOverlay \
+    FontSignikaOverlay \
+    FontOxaniumOverlay
+#    TilesWallpaper
+
 
 # include AICP overalys (Themes support)
 -include packages/overlays/AICP/product_packages.mk

@@ -6156,6 +6156,16 @@
       type="mms"
   />
 
+  <apn carrier="VTB Mobile"
+      carrier_id = "2448"
+      mcc="250"
+      mnc="26"
+      apn="vtb"
+      user=""
+      password=""
+      type="default,supl"
+  />
+
   <apn carrier="VODA internet"
       carrier_id = "1029"
       mcc="250"
@@ -6744,8 +6754,6 @@
       mmsproxy="82.113.100.5"
       mmsport="8080"
       type="default,supl,mms"
-      mvno_match_data="2620739"
-      mvno_type="imsi"
   />
 
   <apn carrier="O2 DE IMS"
@@ -7035,12 +7043,12 @@
       type="dun"
   />
 
-  <apn carrier="O2 Ireland"
+  <apn carrier="3"
       carrier_id = "792"
       mcc="272"
       mnc="02"
       apn="internet"
-      mmsc="http://mmsc.mms.o2.ie:8002/"
+      mmsc="http://mms.three.ie"
       mmsproxy="62.40.32.40"
       mmsport="8080"
       type="default,supl,mms"
@@ -10178,7 +10186,7 @@
       bearer="18"
   />
 
-  <apn carrier="Project Fi - T"
+  <apn carrier="Google Fi - T"
       carrier_id = "1989"
       mcc="310"
       mnc="260"
