@@ -33,8 +33,8 @@ PRODUCT_PACKAGES += \
     MusicFX
 
 # Omni-Record
-PRODUCT_PACKAGES += \
-    OmniRecord
+#PRODUCT_PACKAGES += \
+#    OmniRecord
 
 # Phonograph
 PRODUCT_PACKAGES += \
@@ -47,6 +47,11 @@ PRODUCT_PACKAGES += \
 # OmniJaws
 PRODUCT_PACKAGES += \
     OmniJaws
+
+
+# Touch Gestures - Experimental
+PRODUCT_PACKAGES += \
+    TouchGestures
 
 # Fonts packages
 #PRODUCT_PACKAGES += \
@@ -152,7 +157,7 @@ endif
 # BAIKALOS packages
 PRODUCT_PACKAGES += \
     AicpExtras \
-    BaikalOSExtras \
+    BaikalExtras \
     FontUbuntuOverlay \
     FontOpenSansOverlay \
     FontComfortaaOverlay \
@@ -160,8 +165,8 @@ PRODUCT_PACKAGES += \
     FontExotwoOverlay \
     FontSnigletOverlay \
     FontSignikaOverlay \
-    FontOxaniumOverlay
-#    TilesWallpaper
+    FontOxaniumOverlay \
+    TilesWallpaper
 
 
 # include AICP overalys (Themes support)

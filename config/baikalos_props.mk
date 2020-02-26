@@ -27,3 +27,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # whitelist packages for location providers not in system
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.services.whitelist.packagelist=com.google.android.gms
+
+# Experimental boot_completed offload queue
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.device_config.activity_manager_native_boot.offload_queue_enabled=true
