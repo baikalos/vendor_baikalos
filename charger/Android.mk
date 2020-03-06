@@ -3,25 +3,33 @@ LOCAL_PATH := $(call my-dir)
 # Set healthd_density to the density bucket of the device.
 healthd_density := unknown
 ifneq (,$(TARGET_RECOVERY_DENSITY))
-healthd_density := $(filter %dpi,$(TARGET_RECOVERY_DENSITY))
+ healthd_density := $(filter %dpi,$(TARGET_RECOVERY_DENSITY))
+ ifeq (,$(healthd_density))
+    healthd_density := $(TARGET_RECOVERY_DENSITY)
+ endif
 else
-ifneq (,$(PRODUCT_AAPT_PREF_CONFIG))
-# If PRODUCT_AAPT_PREF_CONFIG includes a dpi bucket, then use that value.
-healthd_density := $(filter %dpi,$(PRODUCT_AAPT_PREF_CONFIG))
-else
-# Otherwise, use the default medium density.
-healthd_density := mdpi
-endif
+  ifneq (,$(PRODUCT_AAPT_PREF_CONFIG))
+  # If PRODUCT_AAPT_PREF_CONFIG includes a dpi bucket, then use that value.
+  healthd_density := $(filter %dpi,$(PRODUCT_AAPT_PREF_CONFIG))
+  ifeq (,$(healthd_density))
+    healthd_density := $(PRODUCT_AAPT_PREF_CONFIG)
+  endif
+  else
+    # Otherwise, use the default medium density.
+    healthd_density := mdpi
+  endif
 endif
 
 include $(CLEAR_VARS)
 LOCAL_SRC_FILES := healthd_board_baikalos.cpp
+#LOCAL_SRC_FILES :=  $(healthd_density)
 LOCAL_MODULE := libhealthd.baikalos
 LOCAL_CFLAGS := -Werror
 LOCAL_C_INCLUDES := \
     system/core/healthd/include \
     system/core/base/include \
-    bootable/recovery/minui/include
+    bootable/recovery/minui/include \
+    frameworks/native/services/batteryservice/include
 ifneq ($(BACKLIGHT_PATH),)
     LOCAL_CFLAGS += -DHEALTHD_BACKLIGHT_PATH=\"$(BACKLIGHT_PATH)\"
 endif
