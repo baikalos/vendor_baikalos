@@ -1,3 +1,8 @@
+# APEX
+ifneq ($(filter NIGHTLY WEEKLY EXPERIMENTAL UNOFFICIAL DEV,$(BAIKALOS_BUILDTYPE)),)
+    TARGET_FLATTEN_APEX := true
+endif
+
 # Charger
 ifeq ($(WITH_BAIKALOS_CHARGER),true)
     BOARD_HAL_STATIC_LIBRARIES := libhealthd.baikalos
