@@ -48,6 +48,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     OmniJaws
 
+# OmniStyle
+PRODUCT_PACKAGES += \
+    OmniStyle
 
 # Touch Gestures - Experimental
 PRODUCT_PACKAGES += \
