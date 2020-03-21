@@ -24,6 +24,9 @@ ifndef BAIKALOS_BUILDTYPE
 endif
 
 ifdef BAIKALOS_BUILDTYPE
+    ifeq ($(BAIKALOS_BUILDTYPE), OFFICIAL)
+        BAIKALOS_VERSION := $(TARGET_PRODUCT)_$(BAIKALOS_BRANCH)-$(VERSION)-OFFICIAL-$(shell date -u +%Y%0m%0d)
+    endif
     ifeq ($(BAIKALOS_BUILDTYPE), NIGHTLY)
         BAIKALOS_VERSION := $(TARGET_PRODUCT)_$(BAIKALOS_BRANCH)-$(VERSION)-NIGHTLY-$(shell date -u +%Y%0m%0d)
     endif
@@ -43,14 +46,23 @@ else
 #We reset back to UNOFFICIAL
         BAIKALOS_VERSION := $(TARGET_PRODUCT)_$(BAIKALOS_BRANCH)-$(VERSION)-UNOFFICIAL-$(shell date -u +%Y%0m%0d)
 endif
+# Set all version
+BAIKALOS_VERSION := BaikalOS-$(BAIKALOS_BUILD)-$(PRODUCT_VERSION_MAJOR)-$(BAIKALOS_BUILD_TYPE)$(BAIKALOS_POSTFIX)
+BAIKALOS_MOD_VERSION := BaikalOS-$(BAIKALOS_BUILD)-$(PRODUCT_VERSION_MAJOR)-$(BAIKALOS_BUILD_TYPE)$(BAIKALOS_POSTFIX)
 
 # BAIKALOS System Version
 PRODUCT_PROPERTY_OVERRIDES += \
+    BUILD_DISPLAY_ID=$(BUILD_ID) \
     ro.baikalos.display.version=$(BAIKALOS_VERSION) \
     ro.baikalos.buildtype=$(BAIKALOS_BUILDTYPE) \
     ro.baikalos.version.update=$(BAIKALOS_BRANCH)-$(VERSION) \
     ro.modversion=$(BAIKALOS_VERSION) \
     ro.baikalos.version=$(VERSION)-$(BAIKALOS_BUILDTYPE)
+    baikalos.ota.version=$(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR).$(PRODUCT_VERSION_MAINTENANCE) \
+    ro.baikalos.version=$(BAIKALOS_VERSION) \
+    ro.modversion=$(BAIKALOS_MOD_VERSION) \
+    ro.baikalos.fingerprint=$(PLATFORM_VERSION)-$(BUILD_ID)-$(BAIKALOS_BUILD_TYPE)-$(shell date +%Y%m%d)
+
 
 # needed for statistics
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -61,3 +73,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.romstats.version=$(VERSION) \
     ro.romstats.tframe=1 \
     ro.romstats.askfirst=1
+
+# Set all version
+BAIKALOS_VERSION := BaikalOS-$(BAIKALOS_BUILD)-$(PRODUCT_VERSION_MAJOR)-$(BAIKALOS_BUILD_TYPE)$(BAIKALOS_POSTFIX)
+BAIKALOS_MOD_VERSION := BaikalOS-$(BAIKALOS_BUILD)-$(PRODUCT_VERSION_MAJOR)-$(BAIKALOS_BUILD_TYPE)$(BAIKALOS_POSTFIX)
+    
