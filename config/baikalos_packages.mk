@@ -152,7 +152,7 @@ endif
 endif
 
 # BAIKALOS OTA
-ifneq ($(BAIKALOS_BUILDTYPE),DEV)
+ifneq ($(BAIKALOS_BUILD_TYPE),DEV)
 PRODUCT_PACKAGES +=  \
    BaikalDelta
 endif

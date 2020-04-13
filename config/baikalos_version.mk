@@ -14,32 +14,32 @@ PRODUCT_VERSION_MAINTENANCE := $(BAIKALOS_VERSION_MAINTENANCE)
 
 VERSION := $(BAIKALOS_VERSION_MAJOR).$(BAIKALOS_VERSION_MINOR)
 
-ifndef BAIKALOS_BUILDTYPE
+ifndef BAIKALOS_BUILD_TYPE
     ifdef RELEASE_TYPE
         RELEASE_TYPE := $(shell echo $(RELEASE_TYPE) | sed -e 's|^BAIKALOS_||g')
-        BAIKALOS_BUILDTYPE := $(RELEASE_TYPE)
+        BAIKALOS_BUILD_TYPE := $(RELEASE_TYPE)
     else
-        BAIKALOS_BUILDTYPE := UNOFFICIAL
+        BAIKALOS_BUILD_TYPE := UNOFFICIAL
     endif
 endif
 
-ifdef BAIKALOS_BUILDTYPE
-    ifeq ($(BAIKALOS_BUILDTYPE), OFFICIAL)
+ifdef BAIKALOS_BUILD_TYPE
+    ifeq ($(BAIKALOS_BUILD_TYPE), OFFICIAL)
         BAIKALOS_VERSION := $(TARGET_PRODUCT)_$(BAIKALOS_BRANCH)-$(VERSION)-OFFICIAL-$(shell date -u +%Y%0m%0d)
     endif
-    ifeq ($(BAIKALOS_BUILDTYPE), NIGHTLY)
+    ifeq ($(BAIKALOS_BUILD_TYPE), NIGHTLY)
         BAIKALOS_VERSION := $(TARGET_PRODUCT)_$(BAIKALOS_BRANCH)-$(VERSION)-NIGHTLY-$(shell date -u +%Y%0m%0d)
     endif
-    ifeq ($(BAIKALOS_BUILDTYPE), WEEKLY)
+    ifeq ($(BAIKALOS_BUILD_TYPE), WEEKLY)
        BAIKALOS_VERSION := $(TARGET_PRODUCT)_$(BAIKALOS_BRANCH)-$(VERSION)-WEEKLY-$(shell date -u +%Y%0m%0d)
     endif
-    ifeq ($(BAIKALOS_BUILDTYPE), EXPERIMENTAL)
+    ifeq ($(BAIKALOS_BUILD_TYPE), EXPERIMENTAL)
         BAIKALOS_VERSION := $(TARGET_PRODUCT)_$(BAIKALOS_BRANCH)-$(VERSION)-EXPERIMENTAL-$(shell date -u +%Y%0m%0d)
     endif
-    ifeq ($(BAIKALOS_BUILDTYPE), UNOFFICIAL)
+    ifeq ($(BAIKALOS_BUILD_TYPE), UNOFFICIAL)
         BAIKALOS_VERSION := $(TARGET_PRODUCT)_$(BAIKALOS_BRANCH)-$(VERSION)-UNOFFICIAL-$(shell date -u +%Y%0m%0d)
     endif
-    ifeq ($(BAIKALOS_BUILDTYPE), DEV)
+    ifeq ($(BAIKALOS_BUILD_TYPE), DEV)
         BAIKALOS_VERSION := $(TARGET_PRODUCT)_$(BAIKALOS_BRANCH)-$(VERSION)-DEV-$(shell date -u +%Y%0m%0d)
     endif
 else
@@ -54,10 +54,10 @@ BAIKALOS_MOD_VERSION := BaikalOS-$(BAIKALOS_BUILD)-$(PRODUCT_VERSION_MAJOR)-$(BA
 PRODUCT_PROPERTY_OVERRIDES += \
     BUILD_DISPLAY_ID=$(BUILD_ID) \
     ro.baikalos.display.version=$(BAIKALOS_VERSION) \
-    ro.baikalos.buildtype=$(BAIKALOS_BUILDTYPE) \
+    ro.baikalos.buildtype=$(BAIKALOS_BUILD_TYPE) \
     ro.baikalos.version.update=$(BAIKALOS_BRANCH)-$(VERSION) \
     ro.modversion=$(BAIKALOS_VERSION) \
-    ro.baikalos.version=$(VERSION)-$(BAIKALOS_BUILDTYPE)
+    ro.baikalos.version=$(VERSION)-$(BAIKALOS_BUILD_TYPE)
     baikalos.ota.version=$(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR).$(PRODUCT_VERSION_MAINTENANCE) \
     ro.baikalos.version=$(BAIKALOS_VERSION) \
     ro.modversion=$(BAIKALOS_MOD_VERSION) \
@@ -69,7 +69,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.baikalos.branch=$(BAIKALOS_BRANCH) \
     ro.romstats.url=https://stats.baikalos.ru/ \
     ro.romstats.name=BAIKALOS \
-    ro.romstats.buildtype=$(BAIKALOS_BUILDTYPE) \
+    ro.romstats.buildtype=$(BAIKALOS_BUILD_TYPE) \
     ro.romstats.version=$(VERSION) \
     ro.romstats.tframe=1 \
     ro.romstats.askfirst=1
