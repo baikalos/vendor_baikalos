@@ -25,22 +25,22 @@ endif
 
 ifdef BAIKALOS_BUILD_TYPE
     ifeq ($(BAIKALOS_BUILD_TYPE), OFFICIAL)
-        BAIKALOS_VERSION := $(TARGET_PRODUCT)-10-$(BAIKALOS_BUILDTYPE)-$(shell date -u +%Y%0m%0d-%H%M)
+        BAIKALOS_VERSION := $(TARGET_PRODUCT)-10-$(BAIKALOS_BUILD_TYPE)-$(shell date -u +%Y%0m%0d-%H%M)
     endif
     ifeq ($(BAIKALOS_BUILD_TYPE), NIGHTLY)
-        BAIKALOS_VERSION := $(TARGET_PRODUCT)-10-$(BAIKALOS_BUILDTYPE)-$(shell date -u +%Y%0m%0d-%H%M)
+        BAIKALOS_VERSION := $(TARGET_PRODUCT)-10-$(BAIKALOS_BUILD_TYPE)-$(shell date -u +%Y%0m%0d-%H%M)
     endif
     ifeq ($(BAIKALOS_BUILD_TYPE), WEEKLY)
-        BAIKALOS_VERSION := $(TARGET_PRODUCT)-10-$(BAIKALOS_BUILDTYPE)-$(shell date -u +%Y%0m%0d-%H%M)
+        BAIKALOS_VERSION := $(TARGET_PRODUCT)-10-$(BAIKALOS_BUILD_TYPE)-$(shell date -u +%Y%0m%0d-%H%M)
     endif
     ifeq ($(BAIKALOS_BUILD_TYPE), EXPERIMENTAL)
-        BAIKALOS_VERSION := $(TARGET_PRODUCT)-10-$(BAIKALOS_BUILDTYPE)-$(shell date -u +%Y%0m%0d-%H%M)
+        BAIKALOS_VERSION := $(TARGET_PRODUCT)-10-$(BAIKALOS_BUILD_TYPE)-$(shell date -u +%Y%0m%0d-%H%M)
     endif
     ifeq ($(BAIKALOS_BUILD_TYPE), UNOFFICIAL)
-        BAIKALOS_VERSION := $(TARGET_PRODUCT)-10-$(BAIKALOS_BUILDTYPE)-$(shell date -u +%Y%0m%0d-%H%M)
+        BAIKALOS_VERSION := $(TARGET_PRODUCT)-10-$(BAIKALOS_BUILD_TYPE)-$(shell date -u +%Y%0m%0d-%H%M)
     endif
     ifeq ($(BAIKALOS_BUILD_TYPE), DEV)
-        BAIKALOS_VERSION := $(TARGET_PRODUCT)-10-$(BAIKALOS_BUILDTYPE)-$(shell date -u +%Y%0m%0d)
+        BAIKALOS_VERSION := $(TARGET_PRODUCT)-10-$(BAIKALOS_BUILD_TYPE)-$(shell date -u +%Y%0m%0d)
     endif
 else
 #We reset back to UNOFFICIAL
