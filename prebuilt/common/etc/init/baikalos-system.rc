@@ -31,7 +31,7 @@ service bugreport /system/bin/dumpstate -d -p -B -z \
     disabled
     keycodes 114 115 116
 
-service persistentLogging /system/bin/logcat -r 8192 -n 9 -v threadTime -f /cache/logs/log
+service persistentLogging /system/bin/logcat -b all -r 8192 -n 9 -v threadTime -f /cache/logs/log
     user system
     group system log
     disabled
