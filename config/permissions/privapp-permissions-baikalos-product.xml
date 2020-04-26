@@ -90,6 +90,7 @@
         <permission name="android.permission.MANAGE_USERS" />
         <permission name="android.permission.MANAGE_DOCUMENTS" />
         <permission name="android.permission.WRITE_SECURE_SETTINGS"/>
+        <permission name="android.permission.BROADCAST_STICKY"/>
     </privapp-permissions>
 
 
