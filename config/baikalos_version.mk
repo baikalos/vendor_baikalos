@@ -1,7 +1,7 @@
 # Version information used on all builds
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_VERSION_TAGS=release-keys USER=android-build BUILD_UTC_DATE=$(shell date +"%Y%0m%0d")
 
-BAIKALOS_BRANCH=q
+BAIKALOS_BRANCH=q10.0
 
 # BAIKALOS RELEASE VERSION
 BAIKALOS_VERSION_MAJOR = 10
