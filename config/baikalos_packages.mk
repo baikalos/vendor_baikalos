@@ -171,6 +171,9 @@ PRODUCT_PACKAGES += \
     FontOxaniumOverlay \
     TilesWallpaper
 
+# BAIKALOS packages
+PRODUCT_PACKAGES += \
+    StitchImage
 
 # include AICP overalys (Themes support)
 -include packages/overlays/AICP/product_packages.mk
