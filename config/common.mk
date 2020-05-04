@@ -66,8 +66,7 @@ PRODUCT_COPY_FILES += \
 
 # Dex preopt
 PRODUCT_DEXPREOPT_SPEED_APPS += \
-    SystemUI \
-    Launcher3QuickStep
+    SystemUI
 
 # Backup Services whitelist
 PRODUCT_COPY_FILES += \
