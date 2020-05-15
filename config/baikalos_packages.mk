@@ -162,6 +162,7 @@ PRODUCT_PACKAGES += \
     AicpExtras \
     BaikalExtras \
     FontUbuntuOverlay \
+    FontGoogleSansOverlay \
     FontOpenSansOverlay \
     FontComfortaaOverlay \
     FontCaviarDreamsOverlay \
