@@ -135,11 +135,6 @@ PRODUCT_COPY_FILES += \
     vendor/baikalos/prebuilt/common/lib/libsketchology_native.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libsketchology_native.so \
     vendor/baikalos/prebuilt/common/lib64/libsketchology_native.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libsketchology_native.so
 
-
-# Ad-block hosts
-PRODUCT_COPY_FILES += \
-    vendor/baikalos/prebuilt/common/etc/hosts.aicp_adblock:system/etc/hosts.aicp_adblock
-
 # Disable vendor restrictions
 PRODUCT_RESTRICT_VENDOR_FILES := false
 

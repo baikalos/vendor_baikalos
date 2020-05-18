@@ -3,6 +3,8 @@ $(TARGET_GENERATED_HOSTS_BLOCKER): INTERMEDIATES := $(TARGET_OUT_INTERMEDIATES)/
 $(TARGET_GENERATED_HOSTS_BLOCKER): vendor/baikalos/adaway/generate.sh vendor/baikalos/adaway/generate.py external/hosts/hosts
 	vendor/baikalos/adaway/generate.sh $@
 
+LOCAL_PATH:= $(call my-dir)
+
 include $(CLEAR_VARS)
 LOCAL_MODULE := hosts.aicp_adblock
 LOCAL_MODULE_CLASS := ETC
