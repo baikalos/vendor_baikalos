@@ -70,7 +70,8 @@ PRODUCT_DEXPREOPT_SPEED_APPS += \
 
 # Backup Services whitelist
 PRODUCT_COPY_FILES += \
-    vendor/baikalos/config/permissions/backup.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysconfig/backup.xml
+    vendor/baikalos/config/permissions/backup.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysconfig/backup.xml \
+    vendor/baikalos/config/permissions/privapp-permissions-livedisplay.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-livedisplay.xml
 
 # BAIKALOS permissions
 PRODUCT_COPY_FILES += \
@@ -134,9 +135,13 @@ PRODUCT_COPY_FILES += \
     vendor/baikalos/prebuilt/common/lib/libsketchology_native.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libsketchology_native.so \
     vendor/baikalos/prebuilt/common/lib64/libsketchology_native.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libsketchology_native.so
 
+
+# Ad-block hosts
+PRODUCT_COPY_FILES += \
+    vendor/baikalos/prebuilt/common/etc/hosts.aicp_adblock:system/etc/hosts.aicp_adblock
+
 # Disable vendor restrictions
 PRODUCT_RESTRICT_VENDOR_FILES := false
-
 
 # Face Unlock
 TARGET_FACE_UNLOCK_SUPPORTED := false
