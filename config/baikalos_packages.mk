@@ -53,8 +53,8 @@ PRODUCT_PACKAGES += \
     OmniStyle
 
 # Touch Gestures - Experimental
-PRODUCT_PACKAGES += \
-    TouchGestures
+#PRODUCT_PACKAGES += \
+#    TouchGestures
 
 # Fonts packages
 #PRODUCT_PACKAGES += \
