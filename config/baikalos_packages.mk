@@ -170,6 +170,7 @@ PRODUCT_PACKAGES += \
     FontSnigletOverlay \
     FontSignikaOverlay \
     FontOxaniumOverlay \
+    FontInterOverlay \
     TilesWallpaper
 
 # BAIKALOS packages
