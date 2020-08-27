@@ -30,6 +30,7 @@
         <permission name="android.permission.SHUTDOWN"/>
         <permission name="android.permission.WRITE_APN_SETTINGS"/>
         <permission name="android.permission.PACKAGE_USAGE_STATS"/>
+        <permission name="com.asus.stitchimage.permission.EXPORTED_FOR_ASUS_APPS"/>
     </privapp-permissions>
 
     <privapp-permissions package="com.aicp.extras">
