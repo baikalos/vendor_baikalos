@@ -33,11 +33,8 @@
         <permission name="com.asus.stitchimage.permission.EXPORTED_FOR_ASUS_APPS"/>
     </privapp-permissions>
 
-    <privapp-permissions package="com.aicp.extras">
-        <permission name="android.permission.WRITE_SECURE_SETTINGS"/>
-    </privapp-permissions>
-
-    <privapp-permissions package="com.baikalos.extras">
+    <privapp-permissions package="ru.baikalos.extras">
+        <permission name="android.permission.CHANGE_COMPONENT_ENABLED_STATE"/>
         <permission name="android.permission.WRITE_SECURE_SETTINGS"/>
     </privapp-permissions>
 
