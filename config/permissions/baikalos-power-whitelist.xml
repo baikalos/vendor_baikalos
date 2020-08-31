@@ -46,7 +46,7 @@
     <!-- allow-in-power-save package="com.google.android.dialer" / -->
     <!-- allow-in-power-save package="org.codeaurora.ims" / -->
 
-    <allow-in-power-save package="com.google.android.apps.turbo" />
+    <!-- allow-in-power-save package="com.google.android.apps.turbo" / -->
 
     <hidden-api-whitelisted-app package="com.asksven.betterbatterystats_xdaedition" />
     <hidden-api-whitelisted-app package="com.asksven.betterbatterystats" />
