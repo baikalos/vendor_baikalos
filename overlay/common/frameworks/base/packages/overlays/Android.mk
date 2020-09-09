@@ -14,7 +14,8 @@ LOCAL_REQUIRED_MODULES := \
     FontExotwoOverlay \
     FontSnigletOverlay \
     FontSignikaOverlay \
-    FontOxaniumOverlay
+    FontOxaniumOverlay \
+    FontInterOverlay
 
 include $(BUILD_PHONY_PACKAGE)
 include $(call first-makefiles-under,$(LOCAL_PATH))
