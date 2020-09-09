@@ -161,16 +161,35 @@ endif
 PRODUCT_PACKAGES += \
     AicpExtras \
     BaikalExtras \
-    FontUbuntuOverlay \
-    FontGoogleSansOverlay \
-    FontOpenSansOverlay \
-    FontComfortaaOverlay \
+    FontAclonicaSourceOverlay \
+    FontAmaranteSourceOverlay \
+    FontArbutusSourceOverlay \
+    FontArvoLatoOverlay \
+    FontBariolSourceOverlay \
+    FontCagliostroSourceOverlay \
     FontCaviarDreamsOverlay \
+    FontCircularStdOverlay \
+    FontComfortaaOverlay \
+    FontComicSansSourceOverlay \
+    FontCoolstorySourceOverlay \
     FontExotwoOverlay \
-    FontSnigletOverlay \
-    FontSignikaOverlay \
-    FontOxaniumOverlay \
+    FontFiraSansSourceOverlay \
+    FontGoogleSansOverlay \
     FontInterOverlay \
+    FontLGSmartGothicSourceOverlay \
+    FontLinotteOverlay \
+    FontOpenSansOverlay \
+    FontOxaniumOverlay \
+    FontRosemarySourceOverlay \
+    FontRubikRubikOverlay \
+    FontSamsungOneSourceOverlay \
+    FontSFProOverlay \
+    FontSignikaOverlay \
+    FontSlateForOnePlusOverlay \
+    FontSnigletOverlay \
+    FontSonySketchSourceOverlay \
+    FontSurferSourceOverlay \
+    FontUbuntuOverlay \
     TilesWallpaper
 
 # BAIKALOS packages
