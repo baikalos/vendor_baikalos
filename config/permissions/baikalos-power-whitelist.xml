@@ -23,6 +23,8 @@
     <allow-in-power-save package="org.omnirom.deskclock" />
     <allow-in-power-save package="org.lineageos.lockclock"/>
 
+    <allow-in-power-save package="com.android.musicfx" />
+
     <!-- allow-in-power-save package="com.android.messaging" / -->
     <!-- allow-in-power-save package="com.topjohnwu.magisk" / -->
 
