@@ -108,9 +108,9 @@ PRODUCT_COPY_FILES += \
     vendor/baikalos/config/permissions/lineage-hiddenapi-package-whitelist.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/lineage-hiddenapi-package-whitelist.xml
 
 # Fonts
-#PRODUCT_COPY_FILES += \
-#    $(call find-copy-subdir-files,*,vendor/baikalos/prebuilt/common/fonts,$(TARGET_COPY_OUT_PRODUCT)/fonts) \
-#    vendor/baikalos/prebuilt/common/etc/fonts_customization.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/fonts_customization.xml
+PRODUCT_COPY_FILES += \
+    $(call find-copy-subdir-files,*,vendor/baikalos/prebuilt/common/fonts,$(TARGET_COPY_OUT_PRODUCT)/fonts) \
+    vendor/baikalos/prebuilt/common/etc/fonts_customization.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/fonts_customization.xml
 
 # Enable Android Beam on all targets
 PRODUCT_COPY_FILES += \
@@ -152,4 +152,8 @@ PRODUCT_COPY_FILES += \
 # Disable vendor restrictions
 PRODUCT_RESTRICT_VENDOR_FILES := false
 
+# Navbar
+PRODUCT_PACKAGES += \
+    GesturalNavigationOverlayLong \
+    GesturalNavigationOverlayMedium
 
