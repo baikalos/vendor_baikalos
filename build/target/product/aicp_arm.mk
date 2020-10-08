@@ -14,9 +14,9 @@
 
 $(call inherit-product, build/target/product/aosp_arm.mk)
 
-include vendor/aicp/build/target/product/aicp_generic_target.mk
+include vendor/baikalos/build/target/product/baikalos_generic_target.mk
 
 TARGET_NO_KERNEL_OVERRIDE := true
 TARGET_USES_64_BIT_BINDER := true
 
-PRODUCT_NAME := aicp_arm
+PRODUCT_NAME := baikalos_arm

@@ -1,4 +1,4 @@
-[Android Ice Cold Project](https://aicp-rom.com)
+[BaikalOS Project](https://baikalos.ru)
 ====================================
 
 
@@ -12,7 +12,7 @@ Initializing Repository
 
 Repository initialization:
 
-    $ repo init -u https://github.com/AICP/platform_manifest.git -b r11.0
+    $ repo init -u https://github.com/baikalos/manifest.git -b r11.0
 
 
 Repository syncing:

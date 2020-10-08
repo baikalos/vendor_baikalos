@@ -52,7 +52,7 @@ except:
     device = product
 
 if not depsonly:
-    print("Device %s not found. Attempting to retrieve device repository from AICP Github (http://github.com/AICP)." % device)
+    print("Device %s not found. Attempting to retrieve device repository from baikalos Github (http://github.com/BaikalOS-Devices)." % device)
 
 repositories = []
 
@@ -72,7 +72,7 @@ def add_auth(githubreq):
         githubreq.add_header("Authorization","Basic %s" % githubauth)
 
 if not depsonly:
-    githubreq = urllib.request.Request("https://api.github.com/search/repositories?q=%s+user:AICP+in:name+fork:true" % device)
+    githubreq = urllib.request.Request("https://api.github.com/search/repositories?q=%s+user:BAIKALOS+in:name+fork:true" % device)
     add_auth(githubreq)
     try:
         result = json.loads(urllib.request.urlopen(githubreq).read().decode())
@@ -124,10 +124,10 @@ def get_manifest_path():
         return ".repo/manifests/{}".format(m.find("include").get("name"))
 
 def get_default_revision():
-    m = ElementTree.parse(".repo/manifests/aicp-default.xml")
+    m = ElementTree.parse(".repo/manifests/baikalos-default.xml")
     d = m.findall('remote')
     for n in d:
-        if n.get('name') == 'aicp':
+        if n.get('name') == 'baikalos':
             r = n.get('revision')
             return r.replace('refs/heads/', '').replace('refs/tags/', '')
 
@@ -167,9 +167,9 @@ def is_in_manifest(projectpath):
         if localpath.get("path") == projectpath:
             return True
 
-    # ... and don't forget the AICP snippet
+    # ... and don't forget the baikalos snippet
     try:
-        lm = ElementTree.parse(".repo/manifests/snippets/aicp.xml")
+        lm = ElementTree.parse(".repo/manifests/snippets/baikalos.xml")
         lm = lm.getroot()
     except:
         lm = ElementTree.Element("manifest")
@@ -197,7 +197,7 @@ def add_to_manifest(repositories, fallback_branch = None):
 
         print('Adding dependency: %s -> %s' % (repo_name, repo_target))
         project = ElementTree.Element("project", attrib = { "path": repo_target,
-            "remote": "aicp", "name": repo_name})
+            "remote": "baikalos", "name": repo_name})
 
         if 'branch' in repository:
             project.set('revision',repository['branch'])
@@ -219,7 +219,7 @@ def add_to_manifest(repositories, fallback_branch = None):
 
 def fetch_dependencies(repo_path, fallback_branch=None, first_dependency=False):
     print('Looking for dependencies in %s' % repo_path)
-    dependencies_path = repo_path + '/aicp.dependencies'
+    dependencies_path = repo_path + '/baikalos.dependencies'
     syncable_repos = []
     verify_repos = []
 
@@ -285,7 +285,7 @@ else:
                 result.extend (json.loads(urllib.request.urlopen(githubreq).read().decode()))
             
             repo_path = "device/%s/%s" % (manufacturer, device)
-            adding = {'repository': "AICP/%s" % repo_name,'target_path':repo_path, 'branch': default_revision}
+            adding = {'repository': "BaikalOS/%s" % repo_name,'target_path':repo_path, 'branch': default_revision}
             
             fallback_branch = None
             if not has_branch(result, default_revision):
@@ -315,4 +315,4 @@ else:
             print("Done")
             sys.exit()
 
-print("Repository for %s not found in the AICP Github repository list. If this is in error, you may need to manually add it to your local_manifests/roomservice.xml." % device)
+print("Repository for %s not found in the baikalos Github repository list. If this is in error, you may need to manually add it to your local_manifests/roomservice.xml." % device)

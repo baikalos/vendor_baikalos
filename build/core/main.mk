@@ -1,2 +1,2 @@
-# Include AICP versions
-include $(TOPDIR)vendor/aicp/build/core/main_version.mk
+# Include baikalos versions
+include $(TOPDIR)vendor/baikalos/build/core/main_version.mk

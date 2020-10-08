@@ -1,8 +1,8 @@
-# Inherit mini common AICP stuff
-$(call inherit-product, vendor/aicp/config/common_mini.mk)
+# Inherit mini common BaikalOS stuff
+$(call inherit-product, vendor/baikalos/config/common_mini.mk)
 
 # Required packages
 PRODUCT_PACKAGES += \
     LatinIME
 
-$(call inherit-product, vendor/aicp/config/telephony.mk)
+$(call inherit-product, vendor/baikalos/config/telephony.mk)

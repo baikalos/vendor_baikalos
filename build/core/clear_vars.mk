@@ -1,4 +1,4 @@
 #
-# Aicp-specific variable clears
+# baikalos-specific variable clears
 #
 LOCAL_IGNORE_SUBDIR :=

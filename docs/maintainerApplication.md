@@ -6,7 +6,7 @@
 * Applicants should drop a message on our discord server (https://discord.gg/nMQUVRD). The team will then notify the reviewers and give you the appropriate contact information for your reviewer. "Spamming" the discord (and/or team members) will result in an immediate rejection.
 * Applicants contacting the team to apply on any other communication platform but **Discord** will be rejected as they clearly didn't read this!
 * Applicants **must** be aware of the fact that the team's language for communicating is ENGLISH.
-* **Continued support** will be needed, so ask yourself: *"Can/Do I want to provide continuous support?"*. AICP is not a "submit & forget" home for buildbots. We don't want people who build numerous custom ROMs. This is not the purpose of maintaining from our point of view. You need to be willing to continue maintaining the device by fixing bugs, applying AOSP security updates and eventually improving performance.
+* **Continued support** will be needed, so ask yourself: *"Can/Do I want to provide continuous support?"*. baikalos is not a "submit & forget" home for buildbots. We don't want people who build numerous custom ROMs. This is not the purpose of maintaining from our point of view. You need to be willing to continue maintaining the device by fixing bugs, applying AOSP security updates and eventually improving performance.
 * An application should include links to the device, vendor and kernel trees on GitHub, plus the email address of the applicant. Please be patient once you have sent your application. It takes some time to review your source code. If changes are deemed necessary, you will receive notice for improvement and be able to re-apply after improving.
 * Applicants should show some respect towards the reviewer regardless of the decision. Privacy is respected by us, so the applicant is supposed to do this too.
 * Applicants **must** use some common sense, mature behavior and politeness, as the team considers that too. Reviewers are not "Bro's" as they are not your family and thus the application will be rejected immediately.
@@ -15,7 +15,7 @@
 * Accepted applicants should also keep in mind that spreading/sharing parts of team internal conversations to anyone for whatever purpose, will result in a ban from the team.
 
 
-*Note: Successfully passing the application for the team also gives you the possibility of opening an "official" DevDB thread on XDA for your device using our [XDA template](https://raw.githubusercontent.com/AICP/vendor_aicp/q10.0/docs/xda_template/xda_thread-template.txt).*
+*Note: Successfully passing the application for the team also gives you the possibility of opening an "official" DevDB thread on XDA for your device using our [XDA template](https://raw.githubusercontent.com/baikalos/vendor_baikalos/q10.0/docs/xda_template/xda_thread-template.txt).*
 
 ---
 

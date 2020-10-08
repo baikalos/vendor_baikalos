@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 # Copyright (C) 2012 The CyanogenMod Project
 # Copyright (C) 2012-2017 AICP Project
+# Copyright (C) 2018-2020 BaikalOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -57,8 +58,8 @@ page = 1
 local_manifests = r'.repo/local_manifests'
 if not os.path.exists(local_manifests): os.makedirs(local_manifests)
 
-removal_manifest = ".repo/local_manifests/00_aicp_removals.xml"
-tmp_removal_manifest = ".repo/local_manifests/tmp_aicp_removals.xml"
+removal_manifest = ".repo/local_manifests/00_baikalos_removals.xml"
+tmp_removal_manifest = ".repo/local_manifests/tmp_baikalos_removals.xml"
 
 def exists_in_tree(lm, repository):
     for child in lm.getchildren():
@@ -106,7 +107,7 @@ def add_to_manifest_dependencies(repositories):
         repo_name = repository['repository']
         existing_project = exists_in_tree(lm, repo_name)
         if existing_project != None:
-            print('Remove-project for AICP/%s already exists' % (repo_name))
+            print('Remove-project for BaikalOS/%s already exists' % (repo_name))
             continue
 
         print ('Adding remove-project to manifest: %s' % (repo_name))
@@ -132,11 +133,11 @@ def add_to_manifest(repositories):
     for repository in repositories:
         repo_name = repository['repository']
         if exists_in_tree(lm, repo_name):
-            print('Remove-project for AICP/%s already exists' % (repo_name))
+            print('Remove-project for BaikalOS/%s already exists' % (repo_name))
             continue
 
         print ('Adding remove-project to manifest: %s' % (repo_name))
-        project = ElementTree.Element("remove-project", attrib = { "name": "AICP/%s" % (repo_name) })
+        project = ElementTree.Element("remove-project", attrib = { "name": "BaikalOS/%s" % (repo_name) })
 
         lm.append(project)
 
@@ -150,7 +151,7 @@ def add_to_manifest(repositories):
 
 def fetch_dependencies(repo_path):
     #print('Looking for required remove-projects')
-    dependencies_path = repo_path + '/aicp.removal.dependencies'
+    dependencies_path = repo_path + '/baikalos.removal.dependencies'
     syncable_repos = []
 
     if os.path.exists(dependencies_path):
@@ -172,7 +173,7 @@ def fetch_dependencies(repo_path):
         os.system('repo sync --force-sync %s' % ' '.join(syncable_repos))
 
 def remove_removals(removal_manifest):
-    tmp_manifest_disable = ".repo/local_manifests/aicp_manifest.xml"
+    tmp_manifest_disable = ".repo/local_manifests/baikalos_manifest.xml"
     tmp_manifest_disabled = ".repo/local_manifests/tmp_disabled"
     syncable_repos = []
     try:

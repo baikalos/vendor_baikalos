@@ -15,4 +15,4 @@
 
 
 # Rules for QCOM targets
-include $(TOPDIR)vendor/aicp/build/core/qcom_target.mk
+include $(TOPDIR)vendor/baikalos/build/core/qcom_target.mk

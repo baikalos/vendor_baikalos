@@ -1,16 +1,16 @@
-function __print_aicp_functions_help() {
+function __print_baikalos_functions_help() {
 cat <<EOF
-Additional AICP functions:
+Additional baikalos functions:
 - cout:            Changes directory to out.
 - mmp:             Builds all of the modules in the current directory and pushes them to the device.
 - mmap:            Builds all of the modules in the current directory and its dependencies, then pushes the package to the device.
 - mmmp:            Builds all of the modules in the supplied directories and pushes them to the device.
-- aicpgerrit:   A Git wrapper that fetches/pushes patch from/to AICP Gerrit Review.
-- aicprebase:   Rebase a Gerrit change and push it again.
-- aicpremote:   Add git remote for AICP Gerrit Review.
+- baikalosgerrit:   A Git wrapper that fetches/pushes patch from/to baikalos Gerrit Review.
+- baikalosrebase:   Rebase a Gerrit change and push it again.
+- baikalosremote:   Add git remote for baikalos Gerrit Review.
 - aospremote:      Add git remote for matching AOSP repository.
 - cafremote:       Add git remote for matching CodeAurora repository.
-- githubremote:    Add git remote for AICP Github.
+- githubremote:    Add git remote for baikalos Github.
 - mka:             Builds using SCHED_BATCH on all processors.
 - mkap:            Builds the module(s) using mka and pushes them to the device.
 - cmka:            Cleans and builds using mka.
@@ -90,12 +90,12 @@ function breakfast()
             # A buildtype was specified, assume a full device name
             lunch $target
         else
-            # This is probably just the AICP model name
+            # This is probably just the baikalos model name
             if [ -z "$variant" ]; then
                 variant="userdebug"
             fi
 
-            lunch aicp_$target-$variant
+            lunch baikalos_$target-$variant
         fi
     fi
     return $?
@@ -106,7 +106,7 @@ alias bib=breakfast
 function eat()
 {
     if [ "$OUT" ] ; then
-        ZIPPATH=`ls -tr "$OUT"/aicp_*.zip | tail -1`
+        ZIPPATH=`ls -tr "$OUT"/baikalos_*.zip | tail -1`
         if [ ! -f $ZIPPATH ] ; then
             echo "Nothing to eat"
             return 1
@@ -114,13 +114,13 @@ function eat()
         echo "Waiting for device..."
         adb wait-for-online
         echo "Found device"
-        if (adb shell getprop ro.aicp.device | grep -q "$AICP_BUILD"); then
+        if (adb shell getprop ro.baikalos.device | grep -q "$BAIKALOS_BUILD"); then
             echo "Rebooting to sideload for install"
             adb reboot sideload-auto-reboot
             adb wait-for-sideload
             adb sideload $ZIPPATH
         else
-            echo "The connected device does not appear to be $AICP_BUILD, run away!"
+            echo "The connected device does not appear to be $BAIKALOS_BUILD, run away!"
         fi
         return $?
     else
@@ -244,43 +244,43 @@ function dddclient()
    fi
 }
 
-function aicpremote()
+function baikalosremote()
 {
     if ! git rev-parse --git-dir &> /dev/null
     then
         echo ".git directory not found. Please run this from the root directory of the Android repository you wish to set up."
         return 1
     fi
-    git remote rm aicp 2> /dev/null
+    git remote rm baikalos 2> /dev/null
     local REMOTE=$(git config --get remote.github.projectname)
-    local AICP="true"
+    local BAIKALOS="true"
     if [ -z "$REMOTE" ]
     then
         REMOTE=$(git config --get remote.aosp.projectname)
-        AICP="false"
+        BAIKALOS="false"
     fi
     if [ -z "$REMOTE" ]
     then
         REMOTE=$(git config --get remote.caf.projectname)
-        AICP="false"
+        BAIKALOS="false"
     fi
 
-    if [ $AICP = "false" ]
+    if [ $BAIKALOS = "false" ]
     then
         local PROJECT=$(echo $REMOTE | sed -e "s#platform/#android/#g; s#/#_#g")
-        local PFX="AICP/"
+        local PFX="BaikalOS/"
     else
         local PROJECT=$REMOTE
     fi
 
-    local AICP_USER=$(git config --get review.gerrit.aicp-rom.username)
-    if [ -z "$AICP_USER" ]
+    local BAIKALOS_USER=$(git config --get review.gerrit.baikalos.username)
+    if [ -z "$BAIKALOS_USER" ]
     then
-        git remote add aicp ssh://gerrit.aicp-rom:29418/$PFX$PROJECT
+        git remote add baikalos ssh://gerrit.baikalos:29418/$PFX$PROJECT
     else
-        git remote add aicp ssh://$AICP_USER@gerrit.aicp-rom:29418/$PFX$PROJECT
+        git remote add baikalos ssh://$BAIKALOS_USER@gerrit.baikalos:29418/$PFX$PROJECT
     fi
-    echo "Remote 'aicp' created"
+    echo "Remote 'baikalos' created"
 }
 
 function aospremote()
@@ -348,7 +348,7 @@ function githubremote()
 
     local PROJECT=$(echo $REMOTE | sed -e "s#platform/#android/#g; s#/#_#g")
 
-    git remote add github https://github.com/AICP/$PROJECT
+    git remote add github https://github.com/BaikalOS/$PROJECT
     echo "Remote 'github' created"
 }
 
@@ -379,14 +379,14 @@ function installboot()
     adb wait-for-online
     adb root
     adb wait-for-online
-    if (adb shell getprop ro.aicp.device | grep -q "$AICP_BUILD");
+    if (adb shell getprop ro.baikalos.device | grep -q "$BAIKALOS_BUILD");
     then
         adb push $OUT/boot.img /cache/
         adb shell dd if=/cache/boot.img of=$PARTITION
         adb shell rm -rf /cache/boot.img
         echo "Installation complete."
     else
-        echo "The connected device does not appear to be $AICP_BUILD, run away!"
+        echo "The connected device does not appear to be $BAIKALOS_BUILD, run away!"
     fi
 }
 
@@ -417,14 +417,14 @@ function installrecovery()
     adb wait-for-online
     adb root
     adb wait-for-online
-    if (adb shell getprop ro.aicp.device | grep -q "$AICP_BUILD");
+    if (adb shell getprop ro.baikalos.device | grep -q "$BAIKALOS_BUILD");
     then
         adb push $OUT/recovery.img /cache/
         adb shell dd if=/cache/recovery.img of=$PARTITION
         adb shell rm -rf /cache/recovery.img
         echo "Installation complete."
     else
-        echo "The connected device does not appear to be $AICP_BUILD, run away!"
+        echo "The connected device does not appear to be $BAIKALOS_BUILD, run away!"
     fi
 }
 
@@ -444,13 +444,13 @@ function makerecipe() {
     if [ "$REPO_REMOTE" = "github" ]
     then
         pwd
-        aicpremote
-        git push aicp HEAD:refs/heads/'$1'
+        baikalosremote
+        git push baikalos HEAD:refs/heads/'$1'
     fi
     '
 }
 
-function aicpgerrit() {
+function baikalosgerrit() {
     if [ "$(__detect_shell)" = "zsh" ]; then
         # zsh does not define FUNCNAME, derive from funcstack
         local FUNCNAME=$funcstack[1]
@@ -460,7 +460,7 @@ function aicpgerrit() {
         $FUNCNAME help
         return 1
     fi
-    local user=`git config --get review.gerrit.aicp-rom.com.username`
+    local user=`git config --get review.gerrit.baikalos.username`
     local review=`git config --get remote.github.review`
     local project=`git config --get remote.github.projectname`
     local command=$1
@@ -496,7 +496,7 @@ EOF
             case $1 in
                 __cmg_*) echo "For internal use only." ;;
                 changes|for)
-                    if [ "$FUNCNAME" = "aicpgerrit" ]; then
+                    if [ "$FUNCNAME" = "baikalosgerrit" ]; then
                         echo "'$FUNCNAME $1' is deprecated."
                     fi
                     ;;
@@ -589,7 +589,7 @@ EOF
                 $local_branch:refs/for/$remote_branch || return 1
             ;;
         changes|for)
-            if [ "$FUNCNAME" = "aicpgerrit" ]; then
+            if [ "$FUNCNAME" = "baikalosgerrit" ]; then
                 echo >&2 "'$FUNCNAME $command' is deprecated."
             fi
             ;;
@@ -688,15 +688,15 @@ EOF
     esac
 }
 
-function aicprebase() {
+function rebase() {
     local repo=$1
     local refs=$2
     local pwd="$(pwd)"
     local dir="$(gettop)/$repo"
 
     if [ -z $repo ] || [ -z $refs ]; then
-        echo "AICP Gerrit Rebase Usage: "
-        echo "      aicprebase <path to project> <patch IDs on Gerrit>"
+        echo "baikalos Gerrit Rebase Usage: "
+        echo "      rebase <path to project> <patch IDs on Gerrit>"
         echo "      The patch IDs appear on the Gerrit commands that are offered."
         echo "      They consist on a series of numbers and slashes, after the text"
         echo "      refs/changes. For example, the ID in the following command is 26/8126/2"
@@ -717,7 +717,7 @@ function aicprebase() {
     echo "Bringing it up to date..."
     repo sync .
     echo "Fetching change..."
-    git fetch "http://gerrit.aicp-rom.com/p/$repo" "refs/changes/$refs" && git cherry-pick FETCH_HEAD
+    git fetch "http://gerrit.baikalos.ru/p/$repo" "refs/changes/$refs" && git cherry-pick FETCH_HEAD
     if [ "$?" != "0" ]; then
         echo "Error cherry-picking. Not uploading!"
         return
@@ -801,7 +801,7 @@ function dopush()
         echo "Device Found."
     fi
 
-    if (adb shell getprop ro.aicp.device | grep -q "$AICP_BUILD") || [ "$FORCE_PUSH" = "true" ];
+    if (adb shell getprop ro.baikalos.device | grep -q "$BAIKALOS_BUILD") || [ "$FORCE_PUSH" = "true" ];
     then
     # retrieve IP and PORT info if we're using a TCP connection
     TCPIPPORT=$(adb devices \
@@ -921,7 +921,7 @@ EOF
     rm -f $OUT/.log
     return 0
     else
-        echo "The connected device does not appear to be $AICP_BUILD, run away!"
+        echo "The connected device does not appear to be $BAIKALOS_BUILD, run away!"
     fi
 }
 
@@ -934,14 +934,14 @@ alias cmkap='dopush cmka'
 
 function repopick() {
     T=$(gettop)
-    $T/vendor/aicp/build/tools/repopick.py $@
+    $T/vendor/baikalos/build/tools/repopick.py $@
 }
 
 function fixup_common_out_dir() {
     common_out_dir=$(get_build_var OUT_DIR)/target/common
     target_device=$(get_build_var TARGET_DEVICE)
     common_target_out=common-${target_device}
-    if [ ! -z $AICP_FIXUP_COMMON_OUT ]; then
+    if [ ! -z $BAIKALOS_FIXUP_COMMON_OUT ]; then
         if [ -d ${common_out_dir} ] && [ ! -L ${common_out_dir} ]; then
             mv ${common_out_dir} ${common_out_dir}-${target_device}
             ln -s ${common_target_out} ${common_out_dir}

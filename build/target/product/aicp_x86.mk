@@ -14,8 +14,8 @@
 
 $(call inherit-product, build/target/product/aosp_x86.mk)
 
-include vendor/aicp/build/target/product/aicp_generic_target.mk
+include vendor/baikalos/build/target/product/baikalos_generic_target.mk
 
 TARGET_USES_64_BIT_BINDER := true
 
-PRODUCT_NAME := aicp_x86
+PRODUCT_NAME := baikalos_x86
