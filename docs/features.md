@@ -13,6 +13,7 @@ _apart from the default AOSP settings..._
 - Advanced call log in AOSP dialer app
 - Advanced power menu with more options (recovery/bootloader/SystemUI, etc.)
 - Aicp Extras app for customizations (searchable from Settings app)
+- BaikalOS Extras app for customizations (searchable from Settings app)
 - Allow more time steps to 'Do not disturb'
 - Always-on display with advanced features (show music title and weather)
 - Aspect ratio hack (legacy apps) configurable per app for supported devices
@@ -41,12 +42,12 @@ _apart from the default AOSP settings..._
 - Device wake up via volume buttons toggle
 - Double tap to sleep on lock-screen
 - Double tap to sleep on status bar
-- Downloadable AICP bootanimations and Wallpapers
+- Downloadable BaikalOS bootanimations and Wallpapers
 - Edge notifications with colour options
 - Enable/Disable hardware keys
 - Enable/Disable lock-screen media art globally
 - Enable/Disable the nabvar
-- Enhanced Changelog in AicpExtras
+- Enhanced Changelog in BaikalExtras
 - Enhanced Launcher3 (Quickstep) with various tweaks & customizations
 - Expanded audio panel (if enabled)
 - Fingerprint authentication vibration
@@ -108,7 +109,7 @@ _apart from the default AOSP settings..._
 - System info on QS panel
 - Toggle to show/hide app icons on toast messages
 - Torch Quick-settings tile and options for longpress on power button to enable it
-- Upload crash logs to aicp haste
+- Upload crash logs to baikalos haste
 - VoLTE icon switchable
 - Volume button playback control when screen off
 - Volume buttons additional toggle to switch music tracks/cursor control on keyboard

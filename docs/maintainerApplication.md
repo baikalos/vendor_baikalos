@@ -15,7 +15,7 @@
 * Accepted applicants should also keep in mind that spreading/sharing parts of team internal conversations to anyone for whatever purpose, will result in a ban from the team.
 
 
-*Note: Successfully passing the application for the team also gives you the possibility of opening an "official" DevDB thread on XDA for your device using our [XDA template](https://raw.githubusercontent.com/baikalos/vendor_baikalos/q10.0/docs/xda_template/xda_thread-template.txt).*
+*Note: Successfully passing the application for the team also gives you the possibility of opening an "official" DevDB thread on XDA for your device using our [XDA template](https://raw.githubusercontent.com/baikalos/vendor_baikalos/r11.0/docs/xda_template/xda_thread-template.txt).*
 
 ---
 
@@ -42,11 +42,11 @@
 * The device **must** have other features for data transfers/communication working, like Bluetooth / NFC / Wifi Hotspot or USB tethering. This is of course dependent on the device's hardware.
 * The device **must** have a working camera. This includes front and rear cameras, if applicable. This means that **all** Camera supported features for Photo and Video should be supported and working.
 * The device's sensors, including fingerprint / proximity / acceleration / etc., **must** be working.
-* The device tree **must** not include any unused overlays, but **must** include the basic overlays to work with AICP features like e.g. key configs, pocketmode, doze etc.
+* The device tree **must** not include any unused overlays, but **must** include the basic overlays to work with BaikalOS features like e.g. key configs, pocketmode, doze etc.
 * The device tree **can** include device specific overlays and packages, but not any obsolete packages or unnecessary properties (system.prop, vendor.prop, etc.).
 
 
-*Note: Once you and your device have been successfully accepted, you will be given access to our team chat and limited access to our servers for your needed device repositories. Of course you will receive help on maintaining your device and have to coordinate your device with the development of AICP.*
+*Note: Once you and your device have been successfully accepted, you will be given access to our team chat and limited access to our servers for your needed device repositories. Of course you will receive help on maintaining your device and have to coordinate your device with the development of BAIKALOS.*
 
 
 

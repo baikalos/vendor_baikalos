@@ -1,18 +1,13 @@
 [CENTER]
 
-[IMG]https://raw.githubusercontent.com/AICP/vendor_aicp/q10.0/docs/xda_template/logo_black.png[/IMG]
+[IMG]https://raw.githubusercontent.com/BaikalOS/vendor_baikalos/r11.0/docs/xda_template/logo_black.png[/IMG]
 
-[SIZE="7"][B]AICP[/B][/SIZE]
-[SIZE="1"][B]Android Ice Cold Project[/B][/SIZE]
+[SIZE="7"][B]BaikalOS[/B][/SIZE]
+[SIZE="1"][B]BaikalOS Project[/B][/SIZE]
 
-AICP is known by everyone as the "Ice Cold Project" that started on a Desire HD years ago (2012) and since then has evolved into a mature ROM with the BEST community that you can find!!!
+Until Android 10 the ROM been based on GZOSP. From 10.0 we changed our base to AICP.
 
-Until Android Lollipop, the ROM has always been based on AOKP. Unfortunately, since AOKP stopped development (but made a comeback later), we changed our base to CM.
-With the re-brand of CM to LineageOS (LOS) we became LineageOS based with some tweaks from AOSP and then changed to be based on the "Ground Zero Open Source Project" (GZOSP) for Android Pie.
-We changed again for Android Q with a base of AOSP repositories and some additions from LineageOS for device specific repositories.
-
-If there are any bugs, either we will sort them out, if it concerns our code base. This ROM isn't LineageOS supported, so there is no need to report errors/bugs to them!!
-
+If there are any bugs, either we will sort them out, if it concerns our code base. This ROM isn't AICP supported, so there is no need to report errors/bugs to them!!
 
 [CODE]#include <std_disclaimer.h>
 
@@ -28,14 +23,15 @@ If there are any bugs, either we will sort them out, if it concerns our code bas
  */
 [/CODE]
 
-[IMG]https://raw.githubusercontent.com/AICP/vendor_aicp/q10.0/docs/xda_template/features.png[/IMG]
-[URL="https://github.com/AICP/vendor_aicp/blob/q10.0/docs/features.md"]Feature list (rough overview)[/URL]
+[IMG]https://raw.githubusercontent.com/BaikalOS/vendor_baikalos/r11.0/docs/xda_template/features.png[/IMG]
+[URL="https://github.com/AICP/vendor_baikalos/blob/r11.0/docs/features.md"]Feature list (rough overview)[/URL]
 
 
-[IMG]https://raw.githubusercontent.com/AICP/vendor_aicp/q10.0/docs/xda_template/credits.png[/IMG]
+[IMG]https://raw.githubusercontent.com/BaikalOS/vendor_baikalos/r11.0/docs/xda_template/credits.png[/IMG]
 
 [B]In the beginning we would like to thank:[/B]
 
+AICP team
 GZOSP team
 LineageOS & CM (R.I.P.) team
 @Maxwen and the rest of the OmniRom team
@@ -45,55 +41,50 @@ AOSiP team
 [B]Community[/B]
 ...
 
-[IMG]https://raw.githubusercontent.com/AICP/vendor_aicp/q10.0/docs/xda_template/team.png[/IMG]
+[IMG]https://raw.githubusercontent.com/BaikalOS/vendor_baikalos/r11.0/docs/xda_template/team.png[/IMG]
 
-[B]@LorD ClockaN[/B]
-[B]@eyosen[/B]
-[B]@semdoc[/B]
-[B]@SpiritCroc[/B]
-[B]@wartomato[/B]
-[B]@Miccia[/B]
-[B]plus the rest of the crazy bunch that we call "team"[/B]
+[B]@sdv22[/B]
+[B]@andr68rus[/B]
 ...
 
 
-[IMG]https://raw.githubusercontent.com/AICP/vendor_aicp/q10.0/docs/xda_template/donations.png[/IMG]
+[IMG]https://raw.githubusercontent.com/BaikalOS/vendor_baikalos/r11.0/docs/xda_template/donations.png[/IMG]
 
 We are paying for servers that build weeklies and everything that comes with this, so [COLOR="DarkRed"]EVERY DONATION[/COLOR] will really be appreciated and be used to cover those expenses.
 [B]Thank you!![/B]
 
-[URL="https://paypal.me/AICPRom"][IMG]https://raw.githubusercontent.com/AICP/vendor_aicp/q10.0/docs/xda_template/paypal.png[/IMG][/URL]
+[URL="https://paypal.me/BaikalOSRom"][IMG]https://raw.githubusercontent.com/BaikalOS/vendor_baikalos/r11.0/docs/xda_template/paypal.png[/IMG][/URL]
 
-[IMG]https://raw.githubusercontent.com/AICP/vendor_aicp/q10.0/docs/xda_template/downloads.png[/IMG]
+[IMG]https://raw.githubusercontent.com/BaikalOS/vendor_baikalos/r11.0/docs/xda_template/downloads.png[/IMG]
 
 [SIZE=3][B][COLOR="RoyalBlue"]Latest Stable Release [/B][/COLOR][SIZE=2][B]Version [/B]15.0[/SIZE]
 [/SIZE]
-[SIZE=3][B]Download link: [url]https://dwnld.aicp-rom.com/[/url][/B][/SIZE]
+[SIZE=3][B]Download link: [url]https://dl.baikalos.ru/[/url][/B][/SIZE]
 
 [B][U][COLOR="Blue"]Please note that official builds will be deleted from our servers every month due to maintenance services.
 We advise everyone to keep at least the latest or best working build on their device as a backup.
 Maybe copy it to a cloud service or USB too.[/COLOR][/U][/B]
 
 
-[IMG]https://raw.githubusercontent.com/AICP/vendor_aicp/q10.0/docs/xda_template/changelog.png[/IMG]
+[IMG]https://raw.githubusercontent.com/BaikalOS/vendor_baikalos/r11.0/docs/xda_template/changelog.png[/IMG]
 
-[SIZE=3][B]Full Changelog link: [url]https://dwnld.aicp-rom.com/[/url][/B][/SIZE]
+[SIZE=3][B]Full Changelog link: [url]https://dl.baikalos.ru/[/url][/B][/SIZE]
 (Just click the changelog button next to the download link in the list of builds available for your device)
 
 Google Apps:
 (link the best one for your device, there are several variants out there right now, nano/micro GApps from opengapps.org is almost always a good choice though)
 
-[IMG]https://raw.githubusercontent.com/AICP/vendor_aicp/q10.0/docs/xda_template/issues.png[/IMG]
+[IMG]https://raw.githubusercontent.com/BaikalOS/vendor_baikalos/r11.0/docs/xda_template/issues.png[/IMG]
 
 You tell... :P
 
 [B][U][COLOR="Blue"]FAQ:[/COLOR][/U][/B]
 [HIDE][B]Before using the ROM:[/B]
 [COLOR="Red"]Q. [I]Can I have an ETA for the next build?[/I][/COLOR]
-[COLOR="Blue"]A. Yes, just look [url="https://github.com/AICP/vendor_jenkins/blob/q10.0/aicp-build-targets"]here[/url] to see what day your device is built on.[/COLOR]
+[COLOR="Blue"]A. No.[/COLOR]
 
 [COLOR="Red"]Q. [I] Does this ROM [B]support[/B] custom kernels officially?[/I][/COLOR]
-[COLOR="Blue"]A. No. You can still use them, but discussion should go in the thread of the respective kernel. We don't offer support for bugs you might encounter while using them![/COLOR]
+[COLOR="Blue"]A. No. BaikalOS uses patched kernels and is not compatible with others. [/COLOR]
 
 [COLOR="Red"]Q. [I]Why doesn't this ROM support Xposed?[/I][/COLOR]
 [COLOR="Blue"]A. Xposed is a hack that is geared towards AOSP. Custom ROMs modify the framework a lot, so Xposed can cause a ton of issues on custom ROMs. Now it might work for you, however it is not to be discussed in this thread, and you should refrain from posting bug reports. [/COLOR]
@@ -111,17 +102,8 @@ You tell... :P
 [COLOR="Red"]Q. [I]How do I 'dirty flash' builds?[/I][/COLOR]
 [COLOR="Blue"]A. Wipe the System, Cache and ART/Dalvik cache. Flash the ROM, GApps (only needed if you wipe the system), your preferred root solution and reboot. Or just use the OTA app to preform that task for you.[/COLOR]
 
-[COLOR="Red"]Q. [I]How do I flash kernel builds?[/I][/COLOR]
-[COLOR="Blue"]A1. If it's a .img file, boot into TWRP and go to the install page in TWRP, in the bottom right corner select "install image", select the desired kernel, then select "boot" as the destination, then swipe to flash, then go back to the install screen and install your root method again, if you don't want to loose root and reboot.[/COLOR]
-[COLOR="Blue"]A2. If it's a flashable ZIP, you can flash it together with a ROM update or separately. Go to the install page in TWRP, choose the kernel zip (or add it to the flash queue right after the ROM zip). Then add your root method to the queue if you don't want to loose root. Now swipe to flash and reboot afterwards.[/COLOR]
 
 [B]Using the ROM:[/B]
-
-[COLOR="Red"]Q. [I]I installed a bad theme and now I'm getting a bootloop, how do I fix it?[/I][/COLOR]
-[COLOR="Blue"]A. In TWRP, flash the substratum rescue zip that's in the substratum folder on the internal storage.[/COLOR]
-
-[COLOR="Red"]Q. [I]I'm having issues with WhatsApp, how do I fix it?[/I][/COLOR]
-[COLOR="Blue"]A. Read [URL="https://github.com/AICP/vendor_aicp/blob/q10.0/docs/xda_template/whatsapp.md"]this[/URL][/COLOR]
 
 [COLOR="Red"]Q. [I]Do I need to provide a logcat if I'm reporting a bug?[/I][/COLOR]
 [COLOR="Blue"]A. If you want it to be fixed faster (or at all) then yes, you should definitely provide a logcat AND the model name. (Note: Please just link the logcat from your GDrive, Dropbox, etc. and do not post the content here. Thanks.)[/COLOR]
@@ -130,7 +112,7 @@ You tell... :P
 [COLOR="Blue"]A1. Read [URL="https://docs.google.com/document/d/1Hj289Mv_13uHyW7ZSp0nId37Up3NBBrrScKRMqUaCII/edit"]this[/URL] thoroughly. Also, here's a good app for getting logs: [url]https://play.google.com/store/apps/details?id=com.tortel.syslog[/url] (Root needed).[/COLOR]
 [COLOR="Blue"]A2. If you are already rooted, you can use the built-in feature to make a logcat and provide that. Just look into the others section in the AICP Extras main page.[/COLOR][/HIDE]
 
-[IMG]https://raw.githubusercontent.com/AICP/vendor_aicp/q10.0/docs/xda_template/instructions.png[/IMG]
+[IMG]https://raw.githubusercontent.com/BaikalOS/vendor_baikalos/r11.0/docs/xda_template/instructions.png[/IMG]
 
 The ROM should contain everything you need to enjoy Android Q. You don't need to install any Add-ons, simply download the latest ROM and GApps, then follow the flashing instructions and go!
 If you want the device to run the ROM "rooted", you can flash a root solution of your choice after the ROM Zipfile.
@@ -167,9 +149,9 @@ TWRP recovery is needed to be able to flash using the built-in OTA app.
 Please make sure that you are on the latest TWRP recovery, keep in mind that this could also be an unofficial version!
 On encrypted devices you will have to enter your PIN/password in TWRP before the process starts.
 
-[IMG]https://raw.githubusercontent.com/AICP/vendor_aicp/q10.0/docs/xda_template/sources.png[/IMG]
+[IMG]https://raw.githubusercontent.com/BaikalOS/vendor_baikalos/r11.0/docs/xda_template/sources.png[/IMG]
 
-[B]If you want to contribute to AICP, or want see what is being worked on/merged, feel free to visit our Gerrit code review system. (Link is at the bottom!!!)[/B]
+[B]If you want to contribute to BaikalOS, or want see what is being worked on/merged, feel free to visit our Gerrit code review system. (Link is at the bottom!!!)[/B]
 
 [B]Kernel source:[/B]
 [B]Put the Github link to your kernel HERE (mandatory), not posting the kernel source violates the GPL, and also violates the rules on XDA ...[/B]
@@ -179,24 +161,20 @@ On encrypted devices you will have to enter your PIN/password in TWRP before the
 [B]Put the Github link to your used vendor HERE.[/B]
 
 [B]ROM & Additional links:
-[URL="https://www.aicp-rom.com/"]AICP's Homepage[/URL]
-[URL="https://gerrit.aicp-rom.com/"]AICP Gerrit Code Review[/URL]
-[URL="https://github.com/AICP"]AICP sources on Github[/URL]
-[URL="https://dwnld.aicp-rom.com/"]AICP Download page for official builds and media content[/URL]
-[URL="https://discord.gg/nMQUVRD"]AICP Discord Community[/URL]
-[URL="https://t.me/aicprom"]AICP Telegram channel for server notifications on official builds[/URL][/B]
+[URL="https://www.baikalos.ru/"]BaikalOS's Homepage[/URL]
+[URL="https://github.com/BaikalOS"]BaikalOS sources on Github[/URL]
+[URL="https://github.com/BaikalOS-Devices"]BaikalOS device trees on Github[/URL]
+[URL="https://dl.baikalos.ru/"]AICP Download page for official builds and media content[/URL]
+[URL="https://t.me/baikalos"]BaikalOS English Telegram support group[/URL][/B]
+[URL="https://t.me/baikalosru"]BaikalOS Russian Telegram support group[/URL][/B]
 
-[B][U]Contributors:[/U][/B]
-(mention all the devs who have contributed to your device tree, kernel, vendor, etc,
-only mention the main ones though, probably the top four or so, otherwise this list will be a mile long xD)
 
 The following information is ONLY needed if you are not opening up a devdb thread on XDA!
-[B]ROM OS Version:[/B] 10.0.x
+[B]ROM OS Version:[/B] 11.0.x
 [B]Kernel:[/B] Linux x.z.y (for example: 4.14.y)
 
 [B][U]Version Information:[/U][/B]
 [B]Status:[/B] WEEKLY
 [B]Release Date:[/B] mm-dd-yyyy
 
-You want to see a "normal" night at the "DEV office", click [URL="https://raw.githubusercontent.com/AICP/vendor_aicp/q10.0/docs/xda_template/dev_office.png"]here[/URL]!!
 [/CENTER]

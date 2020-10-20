@@ -1,4 +1,4 @@
-Optional AICP (and general) overlays to add
+Optional BaikalOS (and general) overlays to add
 -------------------------------
 Framework Overlays (add to: overlay/frameworks/base/core/res/res/values/config.xml)
 
@@ -169,7 +169,7 @@ Support for doze triggers are provided using some overlays, which will have to b
 <bool name="config_dozePulseProximity">false</bool>
 ```
 
-AICP also allows full customisation to the notification LED function, some overlays have to be enabled depending on the feature supported by the notification LED on device:
+baikalos also allows full customisation to the notification LED function, some overlays have to be enabled depending on the feature supported by the notification LED on device:
 ```
 <bool name="config_intrusiveBatteryLed">true</bool>
 <bool name="config_multiColorBatteryLed">true</bool>
@@ -178,7 +178,7 @@ AICP also allows full customisation to the notification LED function, some overl
 
 SystemUI Overlays (Controls SystemUI behavior) (add to: overlay/frameworks/base/packages/SystemUI/res/values/config.xml)
 
-To adjust the cpu temp path for the cpu info option in aicp extras (note: This should only be added if it doesn't show the temp by default and you will have to find the right path for your device):
+To adjust the cpu temp path for the cpu info option in baikalos extras (note: This should only be added if it doesn't show the temp by default and you will have to find the right path for your device):
 ```
 <string name="config_cpuTempSensor">/sys/class/thermal/thermal_zone7/temp</string>
 ```
@@ -218,7 +218,7 @@ Most devices also need this for call recording to work properly (add to: same fi
 ```
 
 
-Optional AICP packages to add (in device.mk)
+Optional baikalos packages to add (in device.mk)
 -------------------------------
 
 To build our fork of the Lineage Snap camera:
@@ -243,7 +243,7 @@ PRODUCT_PACKAGES += \
     JamesDSPManager
 ```
 
-Optional AICP packages to remove (in BoardConfig.mk)
+Optional baikalos packages to remove (in BoardConfig.mk)
 -------------------------------
 
 To remove MusicFX (and ship without any included equalizer app):
@@ -265,7 +265,7 @@ BUILD_WITHOUT_VENDOR := true
 For prebuilt twrp on a/b devices:
 -------------------------------
 
-Replicate https://github.com/AICP/device_twrp
+Replicate https://github.com/BaikalOS/device_twrp
 
 Get twrp.img for your device
 
@@ -305,11 +305,11 @@ Integrate device doze packages into Settings
 You can integrate device-specific doze packages into Settings app using _intent-filter_ element in AndroidManifest.xml of the package:
 ```
 <intent-filter>
-    <action android:name="com.aicp.settings.device.DOZE_SETTINGS" />
+    <action android:name="com.baikalos.settings.device.DOZE_SETTINGS" />
     <category android:name="android.intent.category.DEFAULT" />
 </intent-filter>
 ```
-as [here](https://github.com/AICP/device_oneplus_sdm845-common/blob/16f5876fdaf72be3a66e2b84ac4c6fff185c572e/doze/AndroidManifest.xml#L52-L55)
+as [here](https://github.com/BaikalOS/device_oneplus_sdm845-common/blob/16f5876fdaf72be3a66e2b84ac4c6fff185c572e/doze/AndroidManifest.xml#L52-L55)
 
 
 Compile Kernel against a custom AOSP clang version
