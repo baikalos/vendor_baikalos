@@ -72,7 +72,7 @@ def add_auth(githubreq):
         githubreq.add_header("Authorization","Basic %s" % githubauth)
 
 if not depsonly:
-    githubreq = urllib.request.Request("https://api.github.com/search/repositories?q=%s+user:BAIKALOS+in:name+fork:true" % device)
+    githubreq = urllib.request.Request("https://api.github.com/search/repositories?q=%s+user:BAIKALOS-DEVICES+in:name+fork:true" % device)
     add_auth(githubreq)
     try:
         result = json.loads(urllib.request.urlopen(githubreq).read().decode())
@@ -264,12 +264,13 @@ if depsonly:
     sys.exit()
 
 else:
+    print("Looking for device on github")
     for repository in repositories:
         repo_name = repository['name']
-        if re.match(r"^device_[^_]*_" + device + "$", repo_name):
+        if re.match(r"^android_device_[^_]*_" + device + "$", repo_name):
             print("Found repository: %s" % repository['name'])
             
-            manufacturer = repo_name.replace("device_", "").replace("_" + device, "")
+            manufacturer = repo_name.replace("android_device_", "").replace("_" + device, "")
             
             default_revision = get_default_revision()
             print("Default revision: %s" % default_revision)
@@ -285,7 +286,7 @@ else:
                 result.extend (json.loads(urllib.request.urlopen(githubreq).read().decode()))
             
             repo_path = "device/%s/%s" % (manufacturer, device)
-            adding = {'repository': "BaikalOS/%s" % repo_name,'target_path':repo_path, 'branch': default_revision}
+            adding = {'repository': "BaikalOS-Devices/%s" % repo_name,'target_path':repo_path, 'branch': default_revision}
             
             fallback_branch = None
             if not has_branch(result, default_revision):
