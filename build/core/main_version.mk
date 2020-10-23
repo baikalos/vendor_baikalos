@@ -12,6 +12,10 @@ ADDITIONAL_BUILD_PROPERTIES += \
     ro.modversion=$(BAIKALOS_VERSION) \
     ro.baikalos.version=$(VERSION)-$(BAIKALOS_BUILDTYPE)
 
+# additions for LOS-recovery
+ADDITIONAL_BUILD_PROPERTIES += \
+    ro.lineage.build.version=$(VERSION)
+
 # baikalos Stats
 ADDITIONAL_BUILD_PROPERTIES += \
     ro.baikalos.branch=$(BAIKALOS_BRANCH) \
