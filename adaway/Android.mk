@@ -3,7 +3,7 @@ ifeq ($(INPUT_ADBLOCK_FILE),)
     INPUT_ADBLOCK_FILE := external/hosts/hosts
 endif
 
-ADBLOCK_SCRIPT := vendor/baiklaos/adaway/generate.py
+ADBLOCK_SCRIPT := vendor/baikalos/adaway/generate.py
 
 TARGET_GENERATED_HOSTS_BLOCKER := $(TARGET_OUT_INTERMEDIATES)/ADBLOCK/hosts.aicp_adblock
 $(TARGET_GENERATED_HOSTS_BLOCKER): INTERMEDIATES := $(TARGET_OUT_INTERMEDIATES)/ADBLOCK

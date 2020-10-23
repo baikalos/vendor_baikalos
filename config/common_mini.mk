@@ -1,4 +1,4 @@
-# Inherit mini common baiklaos stuff
-$(call inherit-product, vendor/baiklaos/config/common.mk)
+# Inherit mini common baikalos stuff
+$(call inherit-product, vendor/baikalos/config/common.mk)
 
 PRODUCT_SIZE := mini

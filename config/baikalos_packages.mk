@@ -160,7 +160,7 @@ PRODUCT_PACKAGES += \
     FontInterOverlay \
     TilesWallpaper
 
-# baiklaos Ad-block
+# baikalos Ad-block
 PRODUCT_PACKAGES += \
     hosts.aicp_adblock
 

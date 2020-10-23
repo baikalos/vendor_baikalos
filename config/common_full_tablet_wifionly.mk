@@ -5,5 +5,5 @@ $(call inherit-product, vendor/baikalos/config/common_full.mk)
 PRODUCT_PACKAGES += \
     LatinIME
 
-# Include baiklaos LatinIME dictionaries
+# Include baikalos LatinIME dictionaries
 PRODUCT_PACKAGE_OVERLAYS += vendor/baikalos/overlay/dictionaries
