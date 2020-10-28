@@ -87,6 +87,7 @@ PRODUCT_COPY_FILES += \
 # baikalos permissions
 PRODUCT_COPY_FILES += \
     vendor/baikalos/config/permissions/privapp-permissions-baikalos-system.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-baikalos.xml \
+    vendor/baikalos/config/permissions/privapp-permissions-baikalos-system-ext.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/privapp-permissions-baikalos.xml \
     vendor/baikalos/config/permissions/privapp-permissions-baikalos-product.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-baikalos.xml
 
 # Hidden API whitelist
