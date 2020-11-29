@@ -161,8 +161,8 @@ PRODUCT_PACKAGES += \
     TilesWallpaper
 
 # baikalos Ad-block
-#PRODUCT_PACKAGES += \
-#    hosts.aicp_adblock
+PRODUCT_PACKAGES += \
+    hosts.aicp_adblock
 
 -include packages/overlays/AICP/product_packages.mk
 -include packages/overlays/BaikalOS/product_packages.mk
