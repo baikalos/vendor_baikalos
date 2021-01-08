@@ -353,6 +353,25 @@ qti_camera_device {
 }
 
 soong_config_module_type {
+    name: "face_unlock_camera",
+    module_type: "cc_defaults",
+    config_namespace: "lineageQcomVars",
+    value_variables: ["face_unlock_camera_id"],
+    properties: [
+        "cppflags",
+    ],
+}
+
+face_unlock_camera {
+    name: "face_unlock_camera_defaults",
+    soong_config_variables: {
+        face_unlock_camera_id: {
+            cppflags: ["-DFACE_UNLOCK_CAMERA_ID=%s"],
+        },
+    },
+}
+
+soong_config_module_type {
     name: "extended_compress_format",
     module_type: "cc_defaults",
     config_namespace: "lineageQcomVars",
