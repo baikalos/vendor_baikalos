@@ -192,3 +192,23 @@ PRODUCT_PACKAGES += \
 -include packages/overlays/AICP/product_packages.mk
 -include packages/overlays/BaikalOS/product_packages.mk
 
+
+# Face Unlock
+TARGET_FACE_UNLOCK_SUPPORTED := false
+ifneq ($(TARGET_DISABLE_ALTERNATIVE_FACE_UNLOCK), true)
+PRODUCT_PACKAGES += \
+    FaceUnlockService
+TARGET_FACE_UNLOCK_SUPPORTED := true
+endif
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+    ro.face.moto_unlock_service=$(TARGET_FACE_UNLOCK_SUPPORTED)
+
+ifeq ($(TARGET_USE_MOTO_DOLBY), true)
+    $(warning TARGET_USE_MOTO_DOLBY=true)
+    $(call inherit-product, external/motorola/dolby/dolby.mk)
+    PRODUCT_PACKAGES += \
+        daxService \
+        MotoDolbyV3
+else
+    $(warning TARGET_USE_MOTO_DOLBY=false)
+endif
