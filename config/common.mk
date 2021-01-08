@@ -90,14 +90,19 @@ PRODUCT_COPY_FILES += \
     vendor/baikalos/config/permissions/privapp-permissions-baikalos-system-ext.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/privapp-permissions-baikalos.xml \
     vendor/baikalos/config/permissions/privapp-permissions-baikalos-product.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-baikalos.xml
 
+# baikalos GAPPS permissions
+PRODUCT_COPY_FILES += \
+    vendor/baikalos/config/permissions/privapp-permissions-baikalos-google.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-baikalos-google.xml \
+    vendor/baikalos/config/permissions/privapp-permissions-baikalos-google-product.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-baikalos-google-product.xml
+
 # Hidden API whitelist
 PRODUCT_COPY_FILES += \
     vendor/baikalos/config/permissions/lineage-hiddenapi-package-whitelist.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/lineage-hiddenapi-package-whitelist.xml
 
 # Fonts
-PRODUCT_COPY_FILES += \
-    $(call find-copy-subdir-files,*,vendor/baikalos/prebuilt/common/fonts,$(TARGET_COPY_OUT_PRODUCT)/fonts) \
-    vendor/baikalos/prebuilt/common/etc/fonts_customization.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/fonts_customization.xml
+#PRODUCT_COPY_FILES += \
+#    $(call find-copy-subdir-files,*,vendor/baikalos/prebuilt/common/fonts,$(TARGET_COPY_OUT_PRODUCT)/fonts) \
+#    vendor/baikalos/prebuilt/common/etc/fonts_customization.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/fonts_customization.xml
 
 # Enable Android Beam on all targets
 PRODUCT_COPY_FILES += \
@@ -113,16 +118,12 @@ PRODUCT_COPY_FILES += \
 
 # Google extra permissions and features
 PRODUCT_COPY_FILES += \
-#    vendor/baikalos/config/permissions/android.software.live_wallpaper.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/android.software.live_wallpaper.xml \
     vendor/baikalos/config/permissions/com.google.android.dialer.support.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/com.google.android.dialer.support.xml \
     vendor/baikalos/config/permissions/com.google.android.feature.ANDROID_ONE_EXPERIENCE.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/com.google.android.feature.ANDROID_ONE_EXPERIENCE.xml \
-#    vendor/baikalos/config/permissions/privapp-permissions-platform.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-platform.xml \
-    vendor/baikalos/config/permissions/privapp-permissions-google.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-google.xml \
-    vendor/baikalos/config/permissions/privapp-permissions-google-product.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-google-product.xml \
     vendor/baikalos/config/permissions/privapp-permissions-hotword.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-hotword.xml \
     vendor/baikalos/config/permissions/google_build.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysconfig/google_build.xml \
-    vendor//config/permissions/google-hiddenapi-package-whitelist.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysconfig/google-hiddenapi-package-whitelist.xml \
-#    vendor/baikalos/config/permissions/hiddenapi-package-whitelist.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysconfig/hiddenapi-package-whitelist.xml \
+#    vendor//config/permissions/google-hiddenapi-package-whitelist.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysconfig/google-hiddenapi-package-whitelist.xml \
+    vendor/baikalos/config/permissions/hiddenapi-package-whitelist.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysconfig/hiddenapi-package-whitelist.xml \
     vendor/baikalos/config/permissions/nexus.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysconfig/nexus.xml \
     vendor/baikalos/config/permissions/pixel_2016_exclusive.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysconfig/pixel_2016_exclusive.xml \
     vendor/baikalos/config/permissions/pixel_2017_exclusive.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysconfig/pixel_2017_exclusive.xml \
@@ -139,3 +140,5 @@ PRODUCT_COPY_FILES += \
 
 # Disable vendor restrictions
 PRODUCT_RESTRICT_VENDOR_FILES := false
+
+
