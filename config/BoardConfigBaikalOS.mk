@@ -12,10 +12,10 @@ ifeq ($(TARGET_USE_MUSICFX),false)
     TARGET_USE_NO_MUSICFX := true
 endif
 
+include vendor/baikalos/config/BoardConfigKernel.mk
 ifeq ($(TARGET_KERNEL_CLANG_VERSION),latest)
 include prebuilts/clang/host/linux-x86_custom/clang_custom.mk
 endif
-include vendor/baikalos/config/BoardConfigKernel.mk
 ifeq ($(BOARD_USES_QCOM_HARDWARE),true)
 include vendor/baikalos/config/BoardConfigQcom.mk
 endif
