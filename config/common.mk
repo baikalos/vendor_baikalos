@@ -84,6 +84,10 @@ PRODUCT_COPY_FILES += \
     vendor/baikalos/config/permissions/backup.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysconfig/backup.xml \
     vendor/baikalos/config/permissions/privapp-permissions-livedisplay.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-livedisplay.xml
 
+# Power whitelist
+PRODUCT_COPY_FILES += \
+    vendor/baikalos/config/permissions/baikalos-power-whitelist.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysconfig/baikalos-power-whitelist.xml
+
 # baikalos permissions
 PRODUCT_COPY_FILES += \
     vendor/baikalos/config/permissions/privapp-permissions-baikalos-system.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-baikalos.xml \
