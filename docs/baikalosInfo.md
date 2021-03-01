@@ -36,6 +36,11 @@ To fully utilise the hardware keys (Wake up device with keys, enable/disable key
     <integer name="config_deviceHardwareWakeKeys">64</integer>
 ```
 
+Add to enable LiveDisplay:
+```
+<bool name="config_liveDisplayAvailable">true</bool>
+```
+
 Add if the device has a high aspect ratio (mostly 18:9 or 19:9) and you can specify the ratio also:
 ```
 <bool name="config_haveHigherAspectRatioScreen">true</bool>
