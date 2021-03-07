@@ -140,7 +140,10 @@ PRODUCT_COPY_FILES += \
 # Google extra libraries (sketch/swipe)
 PRODUCT_COPY_FILES += \
     vendor/baikalos/prebuilt/common/lib/libsketchology_native.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libsketchology_native.so \
-    vendor/baikalos/prebuilt/common/lib64/libsketchology_native.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libsketchology_native.so
+    vendor/baikalos/prebuilt/common/lib64/libsketchology_native.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libsketchology_native.so \
+    vendor/baikalos/prebuilt/common/bin/keystore:$(TARGET_COPY_OUT_SYSTEM)/bin/keystore \
+    vendor/baikalos/prebuilt/common/lib64/libkeystore-attestation-application-id.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libkeystore-attestation-application-id.so
+
 
 # Disable vendor restrictions
 PRODUCT_RESTRICT_VENDOR_FILES := false
