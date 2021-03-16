@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="gaming_mode_disabled_toast">Игровой режим выключен</string>
+    <string name="gaming_mode_enabled_toast">Игровой режим включён</string>
+    <string name="gaming_mode_notification_content">Нажмите, чтобы выключить Игровой режим</string>
+    <string name="gaming_mode_notification_title">Игровой режим включён</string>
+    <string name="notification_channel_gaming">Игровой режим</string>
+    <string name="reboot_title">Перезапустить</string>
+    <string name="reboot_message">Перезагрузка системы</string>
+    <string name="reboot_to_bootloader_message">Перезагрузка в загрузчик</string>
+    <string name="reboot_to_bootloader_title">Загрузчик</string>
+    <string name="reboot_to_recovery_message">Перезагрузка в рекавери</string>
+    <string name="reboot_to_recovery_title">Рекавери</string>
+</resources>
