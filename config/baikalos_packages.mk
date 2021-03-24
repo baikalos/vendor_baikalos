@@ -197,7 +197,12 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     hosts.aicp_adblock
 
--include packages/overlays/AICP/product_packages.mk
+# baikalos su
+PRODUCT_PACKAGES += \
+    baikal_su
+
+
+#-include packages/overlays/AICP/product_packages.mk
 -include packages/overlays/BaikalOS/product_packages.mk
 
 
@@ -220,3 +225,5 @@ ifeq ($(TARGET_USE_MOTO_DOLBY), true)
 else
     $(warning TARGET_USE_MOTO_DOLBY=false)
 endif
+
+LOCAL_OVERRIDES_PACKAGES += com.android.messaging_whitelist.xml

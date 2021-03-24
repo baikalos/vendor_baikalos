@@ -24,8 +24,12 @@ include vendor/baikalos/config/aosp_audio.mk
 # Google sounds
 include vendor/baikalos/google/GoogleAudio.mk
 
-PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += vendor/baikalos/overlay
+# PRODUCT_ENFORCE_RRO_TARGETS := *
+# PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += vendor/baikalos/overlay
+PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += vendor/baikalos/overlay/common
 PRODUCT_PACKAGE_OVERLAYS += vendor/baikalos/overlay/common
+#PRODUCT_ENFORCE_RRO_TARGETS := Launcher3 Launcher3Go Launcher3QuickStep Launcher3QuickStepGo AicpExtras DocumentsUI Settings ThemePicker
+
 
 # TWRP
 ifeq ($(BUILD_TWRP),true)
@@ -126,7 +130,6 @@ PRODUCT_COPY_FILES += \
     vendor/baikalos/config/permissions/com.google.android.feature.ANDROID_ONE_EXPERIENCE.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/com.google.android.feature.ANDROID_ONE_EXPERIENCE.xml \
     vendor/baikalos/config/permissions/privapp-permissions-hotword.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-hotword.xml \
     vendor/baikalos/config/permissions/google_build.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysconfig/google_build.xml \
-#    vendor//config/permissions/google-hiddenapi-package-whitelist.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysconfig/google-hiddenapi-package-whitelist.xml \
     vendor/baikalos/config/permissions/hiddenapi-package-whitelist.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysconfig/hiddenapi-package-whitelist.xml \
     vendor/baikalos/config/permissions/nexus.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysconfig/nexus.xml \
     vendor/baikalos/config/permissions/pixel_2016_exclusive.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysconfig/pixel_2016_exclusive.xml \
@@ -136,13 +139,14 @@ PRODUCT_COPY_FILES += \
     vendor/baikalos/config/permissions/pixel_experience_2017.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysconfig/pixel_experience_2017.xml \
     vendor/baikalos/config/permissions/pixel_experience_2018.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysconfig/pixel_experience_2018.xml \
     vendor/baikalos/config/permissions/pixel_experience_2019_midyear.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysconfig/pixel_experience_2019_midyear.xml
+#    vendor//config/permissions/google-hiddenapi-package-whitelist.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysconfig/google-hiddenapi-package-whitelist.xml \
 
 # Google extra libraries (sketch/swipe)
 PRODUCT_COPY_FILES += \
     vendor/baikalos/prebuilt/common/lib/libsketchology_native.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libsketchology_native.so \
     vendor/baikalos/prebuilt/common/lib64/libsketchology_native.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libsketchology_native.so \
-#    vendor/baikalos/prebuilt/common/bin/keystore:$(TARGET_COPY_OUT_SYSTEM)/bin/keystore \
-#    vendor/baikalos/prebuilt/common/lib64/libkeystore-attestation-application-id.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libkeystore-attestation-application-id.so
+    vendor/baikalos/prebuilt/common/bin/keystore:$(TARGET_COPY_OUT_SYSTEM)/bin/keystore \
+    vendor/baikalos/prebuilt/common/lib64/libkeystore-attestation-application-id.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libkeystore-attestation-application-id.so
 
 
 # Disable vendor restrictions
