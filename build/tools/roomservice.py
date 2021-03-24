@@ -72,18 +72,18 @@ def add_auth(githubreq):
         githubreq.add_header("Authorization","Basic %s" % githubauth)
 
 if not depsonly:
-    githubreq = urllib.request.Request("https://api.github.com/search/repositories?q=%s+user:BAIKALOS-DEVICES+in:name+fork:true" % device)
-    add_auth(githubreq)
-    try:
-        result = json.loads(urllib.request.urlopen(githubreq).read().decode())
-    except urllib.error.URLError:
-        print("Failed to search GitHub")
-        sys.exit()
-    except ValueError:
-        print("Failed to parse return data from GitHub")
-        sys.exit()
-    for res in result.get('items', []):
-        repositories.append(res)
+#    githubreq = urllib.request.Request("https://api.github.com/search/repositories?q=%s+user:BAIKALOS-DEVICES+in:name+fork:true" % device)
+#    add_auth(githubreq)
+#    try:
+#        result = json.loads(urllib.request.urlopen(githubreq).read().decode())
+#    except urllib.error.URLError:
+#        print("Failed to search GitHub")
+#        sys.exit()
+#    except ValueError:
+#        print("Failed to parse return data from GitHub")
+#        sys.exit()
+#    for res in result.get('items', []):
+#        repositories.append(res)
 
 local_manifests = r'.repo/local_manifests'
 if not os.path.exists(local_manifests): os.makedirs(local_manifests)
