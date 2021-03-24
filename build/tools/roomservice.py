@@ -72,6 +72,7 @@ def add_auth(githubreq):
         githubreq.add_header("Authorization","Basic %s" % githubauth)
 
 if not depsonly:
+    print("room_service magic disabled!")
 #    githubreq = urllib.request.Request("https://api.github.com/search/repositories?q=%s+user:BAIKALOS-DEVICES+in:name+fork:true" % device)
 #    add_auth(githubreq)
 #    try:
