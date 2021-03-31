@@ -18,6 +18,7 @@
 
     <allow-in-power-save package="com.android.systemui" />
 
+
     <allow-in-power-save package="com.android.deskclock" />
     <allow-in-power-save package="com.google.android.deskclock" />
     <allow-in-power-save package="org.omnirom.deskclock" />
@@ -26,6 +27,9 @@
     <allow-in-power-save package="com.android.phone" />
 
     <allow-in-power-save package="com.android.musicfx" />
+
+    <allow-in-power-save package="com.android.mtp" />
+
     <!-- allow-in-power-save package="com.android.dialer" / -->
     <!-- allow-in-power-save package="com.google.android.dialer" / -->
 
