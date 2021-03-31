@@ -1,0 +1,8 @@
+soong_namespace {
+}
+
+cc_library_headers {
+    name: "baikalos_powerhal_headers",
+    vendor_available: true,
+    export_include_dirs: ["."],
+}

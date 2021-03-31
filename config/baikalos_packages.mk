@@ -201,7 +201,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     baikal_su
 
-
 #-include packages/overlays/AICP/product_packages.mk
 -include packages/overlays/BaikalOS/product_packages.mk
 
