@@ -379,11 +379,33 @@ soong_config_module_type {
     ],
 }
 
+soong_config_module_type {
+    name: "qti_usb_hal_supported_modes",
+    module_type: "cc_defaults",
+    config_namespace: "lineageQcomVars",
+    bool_variables: ["supports_audio_accessory", "supports_debug_accessory"],
+    properties: [
+        "cppflags",
+    ],
+}
+
 face_unlock_camera {
     name: "face_unlock_camera_defaults",
     soong_config_variables: {
         face_unlock_camera_id: {
             cppflags: ["-DFACE_UNLOCK_CAMERA_ID=%s"],
+        },
+    },
+}
+
+qti_usb_hal_supported_modes {
+    name: "qti_usb_hal_supported_modes_defaults",
+    soong_config_variables: {
+        supports_audio_accessory: {
+            cppflags: ["-DSUPPORTS_AUDIO_ACCESSORY"],
+        },
+        supports_debug_accessory: {
+            cppflags: ["-DSUPPORTS_DEBUG_ACCESSORY"],
         },
     },
 }
