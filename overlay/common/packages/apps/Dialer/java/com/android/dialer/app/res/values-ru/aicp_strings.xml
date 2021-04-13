@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2013-2014 The CyanogenMod Project
+     Copyright (C) 2018 AICP ROM
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="other_settings_label">Other settings</string>
+
+    <!-- InCall vibration settings -->
+    <string name="incall_vibration_category_key" translatable="false">dialer_general_incall_vibration_category_key</string>
+    <string name="incall_vibration_category_title">Вибрация при вызове</string>
+    <string name="incall_vibrate_outgoing_key" translatable="false">incall_vibrate_outgoing</string>
+    <string name="incall_vibrate_outgoing_title">Вибрировать при ответе</string>
+    <string name="incall_vibrate_call_waiting_key" translatable="false">incall_vibrate_call_waiting</string>
+    <string name="incall_vibrate_call_waiting_title">Вибрировать при втором вызове</string>
+    <string name="incall_vibrate_hangup_key" translatable="false">incall_vibrate_hangup</string>
+    <string name="incall_vibrate_hangup_title">Вибрировать при завершении</string>
+    <string name="incall_vibrate_45_key" translatable="false">incall_vibrate_45secs</string>
+    <string name="incall_vibrate_45_title">Вибрировать раз в минуту</string>
+    <string name="incall_vibrate_45_summary">Вибрировать каждую 45 секунду вызова</string>
+
+    <!-- Smart Options -->
+    <string name="smart_category_title">Другие настройки</string>
+    <string name="smart_mute_title">Умный мьют</string>
+    <string name="smart_mute_summary">Отключать звук входяжего вызова переворотом устройства</string>
+
+    <!-- Proximity speaker -->
+    <string name="speaker_settings_label">Громкая связь</string>
+    <string name="prox_auto_speaker_title">Автоматическая громкая связь по датчику приближения</string>
+    <string name="prox_auto_speaker_summary">Автоматически включать громкую связь при отдалении телефона от уха</string>
+    <string name="prox_auto_speaker_delay_title">Задежка включения громкой связи</string>
+    <string name="prox_auto_speaker_delay_dialog_title">Задержка в мс</string>
+    <string name="prox_auto_speaker_delay_summary">Громкая связь будет активирована через <xliff:g id="number">%d</xliff:g> мс</string>
+    <string name="prox_auto_speaker_incall_only_title">Только в режиме разговора</string>
+    <string name="prox_auto_speaker_incall_only_summary_on">При исходящем вызове, датчик будет ативным только после ответа абонента</string>
+    <string name="prox_auto_speaker_incall_only_summary_off">Датчик будет активен в любом состоянии разговора (по умолчанию)</string>
+
+    <!-- Dialer postcall -->
+    <string name="enable_post_call_title">Уведомление после вызова</string>
+    <string name="enable_post_call_summary">Разрешить уведомление после вызова внизу экрана</string>
+
+    <!-- Disable proximity sensor -->
+    <string name="disable_proximity_sensor_title">Отключить датчик прибличения</string>
+    <string name="disable_proximity_sensor_summary">Не отключать экран по датчику приближения во время вызова</string>
+
+    <!-- proximity autoanswer feature -->
+    <string name="prox_auto_answer_incall_only_title">Автоответ</string>
+    <string name="prox_auto_answer_incall_only_summary">Использовать датчик приближения для автоматического ответа</string>
+
+    <string name="auto_answer_call_title">Автоответ</string>
+    <string name="auto_answer_call_summary">Включить автоответ при использовании BT или проводной гарнитуры</string>
+    <string name="auto_answer_delay_title">Задержка автоответа</string>
+    <string name="auto_answer_dialog_title">Задежка автоответа в мс</string>
+    <string name="auto_answer_delay_summary">Автоответ будет активирован через <xliff:g id="number">%d</xliff:g> мс</string>
+</resources>
