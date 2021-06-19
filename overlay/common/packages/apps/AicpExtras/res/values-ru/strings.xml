@@ -32,7 +32,7 @@
     <string name="conversation_guts_kill_app_button_title">Кнопка закрытия приложения в уведомлении</string>
     <string name="flashlight_on_call_ignore_dnd_summary">Пульсировать вспышкой в режиме Не беспокоить</string>
     <string name="flashlight_on_call_ignore_dnd_title">Игнорировать Не беспокоить</string>
-    <string name="flashlight_on_call_no_ringer">В режиме виброзвока</string>
+    <string name="flashlight_on_call_no_ringer">В режиме виброзвонка</string>
     <string name="flashlight_on_call_rate_title">Частота мигания</string>
     <string name="flashlight_on_call_ringer">В режиме звонка</string>
     <string name="flashlight_on_call_silent">В бесшумном режиме</string>
