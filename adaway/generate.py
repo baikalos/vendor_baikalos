@@ -21,6 +21,8 @@ BLACKLIST = [
     "0.0.0.0",
     "ad.doubleclick.net",
     "www.googleadservices.com",
+    "s.youtube.com",
+    "s2.youtube.com",
 ]
 
 def get_revision_string(directory):
