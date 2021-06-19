@@ -390,4 +390,76 @@
     <alias name="fantasy" to="surfer" />
     <alias name="ITC Stone Serif" to="surfer" />
 
+    <family customizationType="new-named-family" name="milanpro11">
+        <font weight="100" style="normal">Milanpro11-Thin.ttf</font>
+        <font weight="100" style="italic">Milanpro11-ThinItalic.ttf</font>
+        <font weight="300" style="normal">Milanpro11-Light.ttf</font>
+        <font weight="300" style="italic">Milanpro11-LightItalic.ttf</font>
+        <font weight="400" style="normal">Milanpro11-Regular.ttf</font>
+        <font weight="400" style="italic">Milanpro11-Italic.ttf</font>
+        <font weight="500" style="normal">Milanpro11-Medium.ttf</font>
+        <font weight="500" style="italic">Milanpro11-MediumItalic.ttf</font>
+        <font weight="900" style="normal">Milanpro11-Black.ttf</font>
+        <font weight="900" style="italic">Milanpro11-BlackItalic.ttf</font>
+        <font weight="700" style="normal">Milanpro11-Bold.ttf</font>
+        <font weight="700" style="italic">Milanpro11-BoldItalic.ttf</font>
+    </family>
+    <alias name="milanpro11-medium" to="milanpro11" weight="500" />
+    <alias name="milanpro11-semi-bold" to="milanpro11" weight="600" />
+    <alias name="milanpro11-bold" to="milanpro11" weight="700" />
+    <alias name="times" to="milanpro11" />
+    <alias name="times new roman" to="milanpro11" />
+    <alias name="palatino" to="milanpro11" />
+    <alias name="georgia" to="milanpro11" />
+    <alias name="baskerville" to="milanpro11" />
+    <alias name="goudy" to="milanpro11" />
+    <alias name="fantasy" to="milanpro11" />
+    <alias name="ITC Stone Serif" to="milanpro11" />
+    <!-- Note that aliases must come after the fonts they reference. -->
+    <alias name="sans-serif-thin" to="milanpro11" weight="100" />
+    <alias name="sans-serif-light" to="milanpro11" weight="300" />
+    <alias name="sans-serif-medium" to="milanpro11" weight="500" />
+    <alias name="sans-serif-black" to="milanpro11" weight="900" />
+    <alias name="arial" to="milanpro11" />
+    <alias name="helvetica" to="milanpro11" />
+    <alias name="tahoma" to="milanpro11" />
+    <alias name="verdana" to="milanpro11" />
+
+
+    <family customizationType="new-named-family" name="milanpro12">
+        <font weight="100" style="normal">Milanpro12-Thin.ttf</font>
+        <font weight="100" style="italic">Milanpro12-ThinItalic.ttf</font>
+        <font weight="300" style="normal">Milanpro12-Light.ttf</font>
+        <font weight="300" style="italic">Milanpro12-LightItalic.ttf</font>
+        <font weight="400" style="normal">Milanpro12-Regular.ttf</font>
+        <font weight="400" style="italic">Milanpro12-Italic.ttf</font>
+        <font weight="500" style="normal">Milanpro12-Medium.ttf</font>
+        <font weight="500" style="italic">Milanpro12-MediumItalic.ttf</font>
+        <font weight="900" style="normal">Milanpro12-Black.ttf</font>
+        <font weight="900" style="italic">Milanpro12-BlackItalic.ttf</font>
+        <font weight="700" style="normal">Milanpro12-Bold.ttf</font>
+        <font weight="700" style="italic">Milanpro12-BoldItalic.ttf</font>
+    </family>
+    <alias name="milanpro12-medium" to="milanpro12" weight="500" />
+    <alias name="milanpro12-semi-bold" to="milanpro12" weight="600" />
+    <alias name="milanpro12-bold" to="milanpro12" weight="700" />
+    <alias name="times" to="milanpro12" />
+    <alias name="times new roman" to="milanpro12" />
+    <alias name="palatino" to="milanpro12" />
+    <alias name="georgia" to="milanpro12" />
+    <alias name="baskerville" to="milanpro12" />
+    <alias name="goudy" to="milanpro12" />
+    <alias name="fantasy" to="milanpro12" />
+    <alias name="ITC Stone Serif" to="milanpro12" />
+    <!-- Note that aliases must come after the fonts they reference. -->
+    <alias name="sans-serif-thin" to="milanpro12" weight="100" />
+    <alias name="sans-serif-light" to="milanpro12" weight="300" />
+    <alias name="sans-serif-medium" to="milanpro12" weight="500" />
+    <alias name="sans-serif-black" to="milanpro12" weight="900" />
+    <alias name="arial" to="milanpro12" />
+    <alias name="helvetica" to="milanpro12" />
+    <alias name="tahoma" to="milanpro12" />
+    <alias name="verdana" to="milanpro12" />
+
+
 </fonts-modification>

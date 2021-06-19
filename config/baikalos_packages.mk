@@ -191,6 +191,9 @@ PRODUCT_PACKAGES += \
     FontSonySketchSourceOverlay \
     FontSurferSourceOverlay \
     FontUbuntuOverlay \
+    FontUbuntuOverlay \
+    FontMilanPro11Overlay \
+    FontMilanPro12Overlay \
     TilesWallpaper
 
 # baikalos Ad-block
