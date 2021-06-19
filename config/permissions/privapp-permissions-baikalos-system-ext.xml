@@ -31,6 +31,7 @@
         <permission name="android.permission.RECOVERY"/>
         <permission name="android.permission.WRITE_SYNC_SETTINGS"/>
         <permission name="android.permission.WRITE_APN_SETTINGS" />
+        <permission name="android.permission.HARDWARE_TEST"/>
         <permission name="lineageos.permission.HARDWARE_ABSTRACTION_ACCESS"/>
         <permission name="lineageos.permission.MANAGE_LIVEDISPLAY"/>
     </privapp-permissions>
@@ -41,6 +42,7 @@
         <permission name="lineageos.permission.MANAGE_LIVEDISPLAY"/>
         <permission name="android.permission.MODIFY_AUDIO_ROUTING"/>
         <permission name="android.permission.RESET_BATTERY_STATS"/>
+        <permission name="android.permission.READ_DEVICE_CONFIG"/>
     </privapp-permissions>
 
 </permissions>

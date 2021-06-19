@@ -33,6 +33,9 @@
         <permission name="android.permission.SHUTDOWN"/>
         <permission name="android.permission.WRITE_APN_SETTINGS"/>
         <permission name="android.permission.PACKAGE_USAGE_STATS"/>
+        <permission name="android.permission.HARDWARE_TEST"/>
+        <permission name="lineageos.permission.HARDWARE_ABSTRACTION_ACCESS"/>
+        <permission name="lineageos.permission.MANAGE_LIVEDISPLAY"/>
     </privapp-permissions>
 
     <privapp-permissions package="com.android.camera2">
