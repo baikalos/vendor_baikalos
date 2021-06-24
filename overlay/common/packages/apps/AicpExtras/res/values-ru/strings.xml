@@ -69,4 +69,37 @@
     <string name="signature_spoofing_summary">Включите, чтобы разрешить подделку подписи пакета</string>
     <string name="signature_spoofing_title">Подделка подписи пакета</string>
     <string name="signature_spoofing_footnote">Подмена подписи позволяет приложению выдавать себя за другое приложение. Вредоносные приложения могут использовать это для доступа к данным частного приложения. Предоставляйте это разрешение только с осторожностью!</string>
+    <string name="unit_msec">мс</string>
+    <string name="gesture_navigation_title">Настройки жестов</string>
+    <!-- Network Traffic -->
+    <string name="network_traffic_indicator_down">Входящий</string>
+    <string name="network_traffic_indicator_mode_title">Режим отображения трафика</string>
+    <string name="network_traffic_indicator_up">Исходящий</string>
+    <string name="network_traffic_indicator_updown">Исходящий и входящий</string>
+	<!-- Battery Light -->
+    <string name="battery_light_allow_on_dnd_title">Включить светодиод в режиме «Не беспокоить»</string>
+	<string name="battery_light_low_blinking_title">Мигать светодиодом при низком уровне заряда</string>
+	<!-- Clipboard Toast -->
+    <string name="clipboard_toast_info_show_all">Показывать все оповещения о доступе</string>
+    <string name="clipboard_toast_info_show_important">Показывать только важные оповещения</string>
+    <string name="clipboard_toast_info_title">Оповещения о доступе к буферу обмена</string>
+	 <!-- QS Panel Opacity and Gradient -->
+    <string name="qs_panel_alpha_title">Непрозрачность</string>
+	<string name="qs_sb_bg_alpha_title">Непрозрачность строки состояния</string>
+	<string name="qs_panel_gradient_summary">Показывать градиент под строкой состояния на панели быстрых настроек</string>
+    <string name="qs_panel_gradient_title">Градиент строки состояния</string>
+    <!-- Temp Unit -->
+	<string name="lockscreen_charge_temp_unit_celsius">Цельсия</string>
+    <string name="lockscreen_charge_temp_unit_fahrenheit">Фаренгейт</string>
+    <!-- AOD schedule -->
+	<string name="always_on_display_auto_mode_title">Расписание</string>
+    <string name="always_on_display_end_time_title">Время отключения</string>
+    <string name="always_on_display_schedule_custom">В выбранное время</string>
+    <string name="always_on_display_schedule_mixed_sunrise">От заданного времени до рассвета</string>
+    <string name="always_on_display_schedule_mixed_sunset">От заката до заданного времени</string>
+    <string name="always_on_display_schedule_sunrise">Рассвет</string>
+    <string name="always_on_display_schedule_sunset">Закат</string>
+    <string name="always_on_display_schedule_title">Расписание работы AOD</string>
+    <string name="always_on_display_schedule_twilight">От заката до рассвета</string>
+    <string name="always_on_display_start_time_title">Время включения</string>
 </resources>
