@@ -69,7 +69,6 @@
     <string name="signature_spoofing_summary">Включите, чтобы разрешить подделку подписи пакета</string>
     <string name="signature_spoofing_title">Подделка подписи пакета</string>
     <string name="signature_spoofing_footnote">Подмена подписи позволяет приложению выдавать себя за другое приложение. Вредоносные приложения могут использовать это для доступа к данным частного приложения. Предоставляйте это разрешение только с осторожностью!</string>
-    <string name="unit_msec">мс</string>
     <string name="gesture_navigation_title">Настройки жестов</string>
     <!-- Network Traffic -->
     <string name="network_traffic_indicator_down">Входящий</string>

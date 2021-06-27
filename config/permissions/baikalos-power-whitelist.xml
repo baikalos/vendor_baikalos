@@ -44,8 +44,8 @@
     <!-- allow-in-power-save package="com.android.car.dialer" / -->
     <!-- allow-in-power-save package="com.android.inputmethod.latin" / -->
 
-    <!-- allow-in-power-save package="com.android.cellbroadcastreceiver" / -->
-    <!-- allow-in-power-save package="com.android.certinstaller" / -->
+    <allow-in-power-save package="com.android.cellbroadcastreceiver" />
+    <allow-in-power-save package="com.android.certinstaller" />
     <!-- allow-in-power-save package="com.android.dialer" / -->
     <!-- allow-in-power-save package="com.android.documentsui" / -->
 
@@ -55,7 +55,7 @@
 
     <!-- allow-in-power-save package="com.android.server.telecom" / -->
     <!-- allow-in-power-save package="com.google.android.dialer" / -->
-    <!-- allow-in-power-save package="org.codeaurora.ims" / -->
+    <allow-in-power-save package="org.codeaurora.ims" />
 
     <!-- allow-in-power-save package="com.google.android.apps.turbo" / -->
 
